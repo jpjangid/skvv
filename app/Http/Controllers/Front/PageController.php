@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\front;
 
 use App\Models\Page;
+use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -96,5 +97,22 @@ class PageController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function nonteaching(){
+        // $users = User::all();
+        $users = User::whereHas(
+            'roles', function($q){
+                $q->where('name', 'staff');
+            }
+        )->get();
+        // dd($users);
+        return view('front.non_teaching.index',compact('users'));
+    }
+
+    public function details($id){
+        $users = User::find($id);
+        return view('front.non_teaching.details',compact('users'));
+
     }
 }

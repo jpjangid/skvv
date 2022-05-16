@@ -140,3 +140,6 @@ Route::get('{department}/courses',[App\Http\Controllers\Front\CourseController::
 //Route for front department 
 Route::get('{department}',[App\Http\Controllers\Front\DepartmentController::class,'index'])->name('front.department');
 
+//Route for Non-Teaching Staff
+Route::get('non-teaching/staff',[App\Http\Controllers\Front\PageController::class,'nonteaching'])->name('front.non_teaching.index');
+Route::get('non-teaching/staff/{id}',[\App\Http\Controllers\Front\PageController::class,'details']);

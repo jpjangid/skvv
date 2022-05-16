@@ -29,7 +29,7 @@
                 <!-- <div class="card-body"> -->
                     <div class="table-responsive">
                         <div>
-                            <table class="table align-items-center">
+                            <table class="table align-items-center" id="myTable">
                                 <thead class="thead-light">
                                     <tr>
                                         <th scope="col" class="sort" data-sort="name">User</th>
@@ -76,11 +76,10 @@
                                                 <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class="fas fa-ellipsis-v"></i>
                                                 </a>
-                                                @if(in_array('user.edit', userpermissions()))  
-                                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow" style="">
                                                     <a class="dropdown-item" href="{{ route('users.edit',$user->id)}}">Edit</a>
+                                                    <a class="dropdown-item" href="#" onclick="deleteData({{ $user->id }})" data-toggle="modal" data-target="#modal-sm">Delete</a>
                                                 </div>
-                                                @endif
                                             </div>
                                         </td>
                                     </tr>
@@ -90,6 +89,56 @@
                         </div>
                     </div>
                 <!-- </div> -->
+
+                  <!-- delete modal -->
+                  <form action="" method="POST" id="formDelete">
+                    @csrf
+                    @method('DELETE')
+                    <div class="modal fade" id="modal-sm">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Delete User</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                @if(isset($user))
+                                <div class="modal-body">
+                                    <p>This process can not be undone. Are you sure you want to delete this department?</p>
+                                </div>
+                                @endif
+                                <div class="modal-footer justify-content-between">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </div>
+                            </div>
+                            <!-- /.modal-content -->
+                        </div>
+                        <!-- /.modal-dialog -->
+                    </div>
+                    <!-- /.modal -->
+                </form>
+                <!-- end modal -->
             </div>
         </div>
+@endsection
+
+@section('js')
+
+    <!-- Soft Delete -->
+    <script>
+        $(document).ready( function () {
+            $('#myTable').DataTable();
+        } );
+        function deleteData(id) {
+            $('#fromDelete').attr('action','');
+            if(id != "") {
+                let url = 'admin/users/'+id;
+                url = `{{ url('${url}') }}`;
+                $('#formDelete').attr('action',url);
+            }
+        }
+    </script>
+
 @endsection
