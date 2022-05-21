@@ -4,8 +4,8 @@
       <!-- Brand -->
       <div class="sidenav-header  align-items-center">
         <a class="navbar-brand" href="{{ route('admin') }}">
-          <img src="{{ asset('rv/rv_logo.png')}}" class="navbar-brand-img site-logo-img" alt="rv_logo.png">
-          <span class="dashboard-logo">JRNRVU</span>
+          <img src="{{ asset('rv/SKVV Logo.jpg')}}" class="navbar-brand-img site-logo-img" alt="skvv">
+          <span class="dashboard-logo">SKVV</span>
         </a>
       </div>
       <div class="navbar-inner">
