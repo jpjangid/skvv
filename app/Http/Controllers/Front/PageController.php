@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\front;
+namespace App\Http\Controllers\Front;
 
 use App\Models\Page;
 use App\Models\User;
@@ -16,10 +16,10 @@ class PageController extends Controller
      */
     public function index($slug = null)
     {
-        $page = Page::where(['flag' => 0,'status' => 0,'slug' => $slug])->first();
-        if(!empty($page)) {
-            $pages = Page::where(['flag' => 0,'status' => 0])->get();
-            return view('front.pages.index',compact('page','pages'));
+        $page = Page::where(['flag' => 0, 'status' => 0, 'slug' => $slug])->first();
+        if (!empty($page)) {
+            $pages = Page::where(['flag' => 0, 'status' => 0])->get();
+            return view('front.pages.index', compact('page', 'pages'));
         }
         return redirect('404');
     }
@@ -99,20 +99,22 @@ class PageController extends Controller
         //
     }
 
-    public function nonteaching(){
+    public function nonteaching()
+    {
         // $users = User::all();
         $users = User::whereHas(
-            'roles', function($q){
+            'roles',
+            function ($q) {
                 $q->where('name', 'staff');
             }
         )->get();
         // dd($users);
-        return view('front.non_teaching.index',compact('users'));
+        return view('front.non_teaching.index', compact('users'));
     }
 
-    public function details($id){
+    public function details($id)
+    {
         $users = User::find($id);
-        return view('front.non_teaching.details',compact('users'));
-
+        return view('front.non_teaching.details', compact('users'));
     }
 }

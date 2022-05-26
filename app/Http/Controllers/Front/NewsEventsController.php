@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\front;
+namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use App\Models\NewsEvents;
@@ -10,17 +10,17 @@ class NewsEventsController extends Controller
 {
     public function index()
     {
-        $news = NewsEvents::select('heading','slug','img_url')->where(['flag' => 0])->where('display_date','<=',date('Y-m-d'))->get(); 
-        return view('front.news_events.index',compact('news'));
+        $news = NewsEvents::select('heading', 'slug', 'img_url')->where(['flag' => 0])->where('display_date', '<=', date('Y-m-d'))->get();
+        return view('front.news_events.index', compact('news'));
     }
 
     public function getNews($news)
     {
-        $news = NewsEvents::where(['flag' => 0,'slug' => $news])->first();
-        if(empty($news)) {
+        $news = NewsEvents::where(['flag' => 0, 'slug' => $news])->first();
+        if (empty($news)) {
             return redirect()->back();
         }
-        return view('front.news_events.detail',compact('news'));
+        return view('front.news_events.detail', compact('news'));
     }
 
     public function create()
