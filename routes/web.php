@@ -25,6 +25,7 @@ Route::get('/', [App\Http\Controllers\Front\HomeController::class, 'index']);
 Route::view('404', '404');
 
 Auth::routes();
+Route::get('test', [App\Http\Controllers\Front\OnlineExamController::class, 'test']);
 
 //Routes for login users
 Route::middleware(['auth', 'prevent'])->group(function () {
@@ -91,6 +92,15 @@ Route::middleware(['auth', 'prevent'])->group(function () {
         Route::post('rolepermissions/store', [RolePermissionController::class, 'store']);
     });
 
+    Route::prefix('onlineexam')->group(function () {
+        Route::get('/', [OnlineExamController::class, 'index']);
+        Route::get('create', [OnlineExamController::class, 'create']);
+        Route::post('store', [OnlineExamController::class, 'store']);
+        Route::get('edit/{onlineexam}', [OnlineExamController::class, 'edit'])->name('onlineexam.edit');
+        Route::put('update/{id}', [OnlineExamController::class, 'update']);
+        Route::delete('delete/{id}', [OnlineExamController::class, 'destroy']);
+    });
+
     //Route for Get State City //
     Route::post('get-city-list', [UserController::class, 'getCity']);
     Route::post('get-pincode-list', [UserController::class, 'getPincode']);
@@ -136,6 +146,13 @@ Route::get('video-gallery', [App\Http\Controllers\Front\VideoController::class, 
 Route::get('news-events', [App\Http\Controllers\Front\NewsEventsController::class, 'index'])->name('front.news.events');
 Route::get('news-events/{news}', [App\Http\Controllers\Front\NewsEventsController::class, 'getNews'])->name('front.news.slug');
 
+Route::prefix('apply')->group(function () {
+    Route::get('/', [App\Http\Controllers\Front\OnlineExamController::class, 'onlineexamform'])->name('front.phd.form');
+    Route::POST('store', [App\Http\Controllers\Front\OnlineExamController::class, 'onlineexamstore']);
+    Route::get('confirm/{id}', [App\Http\Controllers\Front\OnlineExamController::class, 'confirmform']);
+    Route::put('success/{id}', [App\Http\Controllers\Front\OnlineExamController::class, 'success']);
+    Route::get('downloadpdf/{id}', [App\Http\Controllers\Front\OnlineExamController::class, 'pdfdownload']);
+});
 //Route for course front
 Route::get('{department}/courses', [App\Http\Controllers\Front\CourseController::class, 'index'])->name('front.course');
 
@@ -145,3 +162,6 @@ Route::get('{department}', [App\Http\Controllers\Front\DepartmentController::cla
 //Route for Non-Teaching Staff
 Route::get('non-teaching/staff', [App\Http\Controllers\Front\PageController::class, 'nonteaching'])->name('front.non_teaching.index');
 Route::get('non-teaching/staff/{id}', [\App\Http\Controllers\Front\PageController::class, 'details']);
+
+Route::post('get-city-list', [UserController::class, 'getCity']);
+Route::post('get-pincode-list', [UserController::class, 'getPincode']);

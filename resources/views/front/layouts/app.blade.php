@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Shri Kallaji Vedic Vishvavidyalaya | @yield('title','Home')</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  @if(request()->session()->has('download.in.the.next.request'))
+  <meta http-equiv="refresh" content="5;url={{ url('test') }}">
+  @endif
   <link href="{{ asset('frontend/css') }}" rel="stylesheet">
   <link href="{{ asset('frontend/style.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -14,7 +18,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="{{ asset('frontend/open-iconic-bootstrap.css') }}">
   <style type="text/css">
-  .scrollax-performance,
+    .scrollax-performance,
     .scrollax-performance *,
     .scrollax-performance *:before,
     .scrollax-performance *:after {
@@ -27,6 +31,7 @@
   <script type="text/javascript" charset="UTF-8" src="{{ asset('frontend/common.js') }}"></script>
   <script type="text/javascript" charset="UTF-8" src="{{ asset('frontend/util.js.download') }}"></script>
 </head>
+
 <body data-aos-easing="slide" data-aos-duration="800" data-aos-delay="0">
   <!-- header section begin -->
   @include('front.layouts.header')
@@ -55,26 +60,26 @@
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
   <script async="" src="{{ asset('frontend/js') }}"></script>
   <script>
-  $(document).ready(function() {
+    $(document).ready(function() {
       var owl = $('.owl-carousel');
       owl.owlCarousel({
-          items:4,
-          loop:true,
-          margin:10,
-          autoplay:true,
-          lazyLoad: true,
-          autoplayTimeout:2500,
-          autoplayHoverPause:true
+        items: 4,
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        lazyLoad: true,
+        autoplayTimeout: 2500,
+        autoplayHoverPause: true
       });
-      $('.play').on('click',function(){
-          owl.trigger('play.owl.autoplay',[1000])
+      $('.play').on('click', function() {
+        owl.trigger('play.owl.autoplay', [1000])
       })
-      $('.stop').on('click',function(){
-          owl.trigger('stop.owl.autoplay')
+      $('.stop').on('click', function() {
+        owl.trigger('stop.owl.autoplay')
       })
 
       $(function() {
-          $('.lazy-load-images').lazy();
+        $('.lazy-load-images').lazy();
       });
 
     });
@@ -82,23 +87,24 @@
 
 
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
     gtag('js', new Date());
 
     gtag('config', 'UA-23581568-13');
   </script>
   <script defer="" src="{{ asset('frontend/beacon.min.js.download') }}" data-cf-beacon="{&quot;rayId&quot;:&quot;696b02e24b4e2cc2&quot;,&quot;token&quot;:&quot;cd0b4b3a733644fc843ef0b185f98241&quot;,&quot;version&quot;:&quot;2021.9.0&quot;,&quot;si&quot;:100}">
-  var current = new Date();
+    var current = new Date();
     var dd = current.getDate();
     var mm = current.getMonth() + 1;
-    var yyyy = current.getFullYear();  
-    if (dd < 10) 
-    {
-        dd = '0' + dd;
+    var yyyy = current.getFullYear();
+    if (dd < 10) {
+      dd = '0' + dd;
     }
-    if (mm < 10) 
-    {
-        mm = '0' + mm;
+    if (mm < 10) {
+      mm = '0' + mm;
     }
     var today = dd + '-' + mm + '-' + yyyy;
     $(".current-date").text(today);
