@@ -89,15 +89,6 @@ Route::middleware(['auth', 'prevent'])->group(function () {
         Route::get('role/permissions', [RolePermissionController::class, 'index']);
         Route::get('rolepermission/edit/{id}', [RolePermissionController::class, 'edit']);
         Route::post('rolepermissions/store', [RolePermissionController::class, 'store']);
-
-        Route::prefix('onlineexam')->group(function(){
-            Route::get('/', [OnlineExamController::class, 'index']);
-            Route::get('create', [OnlineExamController::class, 'create']);
-            Route::post('store', [OnlineExamController::class, 'store']);
-            Route::get('edit/{id}', [OnlineExamController::class, 'edit']);
-            Route::put('update/{id}', [OnlineExamController::class, 'update']);
-            Route::delete('delete/{id}', [OnlineExamController::class, 'destroy']);
-        });
     });
 
     //Route for Get State City //
