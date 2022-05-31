@@ -19,6 +19,22 @@
   html {
   overflow-x: hidden;
 }
+.background_image {
+  /* background-image:url('/frontend/images/SKVV_Logo.jpg'); */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  text-align: center;
+  position: relative;
+}
+#bg_img {
+  opacity: 0.3;
+}
+.dept-intro {
+  position: absolute;
+  bottom: 230px;
+}
+
 </style>
 @endsection
 
@@ -27,10 +43,11 @@
   <div class="container-wrap my-3">
     <div class="row no-gutters">
       <div class="col-md-12">
-        <div class="container">
-          <h1 class="text-uppercase section-heading text-center font-weight-bold">{{ $department->name }}</h1>
-            <div class="dept-intro text-justify">
-             <p>{{ $department->description }}</p>
+        <div class="container background_image">
+          <img src="/frontend/images/SKVV_Logo.jpg" alt="" id="bg_img">
+          <div class="dept-intro text-justify">
+              <h1 class="text-uppercase section-heading text-center font-weight-bold">{{ $department->name }}</h1>
+             <p>{{ $department->short_des }}</p>
             </div>
             <div class="font-weight-bold text-center my-4">For department works please mail to skvv.uni@gmail.com</div>
         </div>
