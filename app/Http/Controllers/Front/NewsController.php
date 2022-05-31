@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\front;
+namespace App\Http\Controllers\Front;
 
 use App\Models\NewsEvents;
 use App\Models\Category;
@@ -19,20 +19,20 @@ class NewsController extends Controller
 {
    public function recruitment()
    {
-    $news = NewsEvents::where(['cat'=> 'recruitment'])->get();
-    // dd($news);
-    return view('front.pages.recruitment',compact('news'));
+      $news = NewsEvents::where(['cat' => 'recruitment'])->get();
+      // dd($news);
+      return view('front.pages.recruitment', compact('news'));
    }
 
    public function award()
    {
-      $news = NewsEvents::where(['cat'=> 'award'])->orderBy('created_at','asc')->take(10)->get();
-      return view('front.pages.award',compact('news'));
+      $news = NewsEvents::where(['cat' => 'award'])->orderBy('created_at', 'asc')->take(10)->get();
+      return view('front.pages.award', compact('news'));
    }
 
    public function awardAchievements()
    {
-      $news = NewsEvents::where(['cat'=> 'award'])->orderBy('created_at','asc')->get();
-      return view('front.pages.award_detail',compact('news'));
+      $news = NewsEvents::where(['cat' => 'award'])->orderBy('created_at', 'asc')->get();
+      return view('front.pages.award_detail', compact('news'));
    }
 }

@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 
-@section('title','Addmission & Exam')
+@section('title','Online Exam')
 
 @section('breadcrumb')
 <div class="row align-items-center py-4">
@@ -10,12 +10,12 @@
             <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                 <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
                 <li class="breadcrumb-item"><a href="{{ url('admin')}}">Dashboards</a></li>
-                <li class="breadcrumb-item active" aria-current="{{ url('admin/addmissionexam') }}">Addmission & Exam</li>
+                <li class="breadcrumb-item active" aria-current="{{ url('onlineexam') }}">Online Exam</li>
             </ol>
         </nav>
     </div>
     <div class="col-lg-6 col-5 text-right">
-        <a href="{{ route('addmissionexam.create')}}" class="btn btn-neutral">+ Add Addmission & Exam</a>
+        <a href="{{ url('admin/onlineexam/create')}}" class="btn btn-neutral">+ Add Online Exam</a>
     </div>
 </div>
 @endsection
@@ -33,36 +33,43 @@
                         <thead class="thead-light">
                             <tr>
                                 <th scope="col" class="sort" data-sort="number">S.No.</th>
-                                <th scope="col">College</th>
-                                <th scope="col">Department</th>
-                                <th scope="col">Course</th>
-                                <th scope="col">Type</th>
-                                <th scope="col">Start Date</th>
-                                <th scope="col">End Date</th>
+                                <!-- <th scope="col">College Name</th> -->
+                                <th scope="col">Adimission</th>
+                                <th scope="col">Subject</th>
+                                <th scope="col">Student Name</th>
+                                <!-- <th scope="col">Adhaar No</th> -->
+                                <th scope="col">Father Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Mobile No</th>
+                                <th scope="col">Gender</th>
+                                <th scope="col">payment type</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             @php
-                            $i=1;
+                            $i = 1;
                             @endphp
-                            @foreach ($addmissionexams as $addmissionexam)
+                            @foreach($onlinexams as $onlineexam)
                             <tr>
-                                <td>{{ $i++ }}</td>
-                                <td>{{ $addmissionexam->college_id }}</td>
-                                <td>{{ $addmissionexam->department_id }}</td>
-                                <td>{{ $addmissionexam->course_id }}</td>
-                                <td>{{ $addmissionexam->type }}</td>
-                                <td>{{ $addmissionexam->start_date }}</td>
-                                <td>{{ $addmissionexam->end_date }}</td>
+                                <td>{{ $i++}}</td>
+                                <td>{{ $onlineexam->addmission}}</td>
+                                <td>{{ $onlineexam->subject}}</td>
+                                <td>{{ $onlineexam->student_name}}</td>
+                                <!-- <td>{{ $onlineexam->adhaar_no}}</td> -->
+                                <td>{{ $onlineexam->stud_father_name}}</td>
+                                <td>{{ $onlineexam->email}}</td>
+                                <td>{{ $onlineexam->mobile_no}}</td>
+                                <td>{{ $onlineexam->gender}}</td>
+                                <td>{{ $onlineexam->payment_type}}</td>
                                 <td class="text-right">
                                     <div class="dropdown">
                                         <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="fas fa-ellipsis-v"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                            <a class="dropdown-item" href="{{ route('addmissionexam.edit',['addmissionexam' => $addmissionexam->id]) }}">Edit</a>
-                                            <a class="dropdown-item" href="#" onclick="deleteData({{ $addmissionexam->id }})" data-toggle="modal" data-target="#modal-sm">Delete</a>
+                                            <a class="dropdown-item" href="{{ route('onlineexam.edit',['onlineexam' => $onlineexam->id]) }}">Edit</a>
+                                            <a class="dropdown-item" href="#" onclick="deleteData({{ $onlineexam->id }})" data-toggle="modal" data-target="#modal-sm">Delete</a>
                                         </div>
                                     </div>
                                 </td>
@@ -87,11 +94,11 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            @if(isset($addmissinexam))
+                            {{-- @if(isset($news)) --}}
                             <div class="modal-body">
                                 <p>This process can not be undone. Are you sure you want to delete this news?</p>
                             </div>
-                            @endif
+                            {{-- @endif --}}
                             <div class="modal-footer justify-content-between">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                 <button type="submit" class="btn btn-danger">Delete</button>
@@ -119,7 +126,7 @@
         function deleteData(id) {
             $('#fromDelete').attr('action', '');
             if (id != "") {
-                let url = 'admin/addmissionexam/' + id;
+                let url = 'admin/news/events/delete/' + id;
                 url = `{{ url('${url}') }}`;
                 $('#formDelete').attr('action', url);
             }

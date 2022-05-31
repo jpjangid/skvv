@@ -4,8 +4,8 @@
       <!-- Brand -->
       <div class="sidenav-header  align-items-center">
         <a class="navbar-brand" href="{{ route('admin') }}">
-          <img src="{{ asset('rv/rv_logo.png')}}" class="navbar-brand-img site-logo-img" alt="rv_logo.png">
-          <span class="dashboard-logo">JRNRVU</span>
+          <img src="{{ asset('rv/SKVV Logo.jpg')}}" class="navbar-brand-img site-logo-img" alt="skvv">
+          <span class="dashboard-logo">SKVV</span>
         </a>
       </div>
       <div class="navbar-inner">
@@ -19,7 +19,7 @@
                 <span class="nav-link-text">Dashboard</span>
               </a>
             </li>
-            @if(in_array('roles.index', userpermissions()))  
+            @if(in_array('roles.index', userpermissions()))
             <li class="nav-item">
               <a class="nav-link" href="{{ url('admin/role/permissions') }}">
                 <i class="ni ni-tie-bow text-primary"></i>
@@ -27,7 +27,7 @@
               </a>
             </li>
             @endif
-            @if(in_array('userpermission.index', userpermissions()))  
+            @if(in_array('userpermission.index', userpermissions()))
             <li class="nav-item">
               <a class="nav-link" href="{{ url('admin/userpermissions') }}">
                 <i class="ni ni-tie-bow text-primary"></i>
@@ -35,7 +35,7 @@
               </a>
             </li>
             @endif
-            @if(in_array('user.index', userpermissions()))  
+            @if(in_array('user.index', userpermissions()))
             <li class="nav-item">
               <a class="nav-link" href="{{ route('users.index') }}">
                 <i class="ni ni-circle-08 text-primary"></i>
@@ -107,20 +107,26 @@
               <a class="nav-link" href="{{ route('course.index') }}">
                 <i class="ni ni-single-copy-04 text-primary"></i>
                 <span class="nav-link-text">Courses</span>
-              </a>  
-            </li>  
+              </a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('faculty.index') }}">
                 <i class="ni ni-single-copy-04 text-primary"></i>
                 <span class="nav-link-text">Faculty</span>
-              </a>  
-            </li>  
-             <li class="nav-item">
+              </a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="{{ route('alumnispeak.index') }}">
                 <i class="ni ni-single-copy-04 text-primary"></i>
                 <span class="nav-link-text">Alumni Speak</span>
-              </a>  
-            </li>  
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url('admin/onlineexam') }}">
+                <i class="ni ni-single-copy-04 text-primary"></i>
+                <span class="nav-link-text">Online Exam</span>
+              </a>
+            </li>
           </ul>
           <!-- Divider -->
           <hr class="my-3">

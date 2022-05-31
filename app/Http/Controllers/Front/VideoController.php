@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\front;
+namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -11,8 +11,8 @@ class VideoController extends Controller
 
     public function index()
     {
-       $videos = Video::where(['flag' => 0,'status' => 0])->get(); 
-       return view('front.videos.index',compact('videos'));
+        $videos = Video::where(['flag' => 0, 'status' => 0])->get();
+        return view('front.videos.index', compact('videos'));
     }
 
     public function create()
