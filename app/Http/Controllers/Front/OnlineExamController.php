@@ -9,7 +9,8 @@ use App\Models\Location;
 use App\Models\QualificationDetails;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-use PDF;
+//use PDF;
+use Barryvdh\DomPDF\Facade as PDF;
 
 class OnlineExamController extends Controller
 {

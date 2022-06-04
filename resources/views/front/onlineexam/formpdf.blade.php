@@ -4,8 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Hind&display=swap" rel="stylesheet">
     <title>Addmission PDF</title>
-    <style>
+    <style type="text/css">
+
+       body { font-size:13px; 
+         font-family: 'Hind', serif;
+        }
+         
         .border {
             border: 1px solid black;
         }
