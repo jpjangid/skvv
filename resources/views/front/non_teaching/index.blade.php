@@ -1,16 +1,18 @@
 @extends('front.layouts.app')
 
-@section('title','News & Events')
+@section('title','Non Teaching')
 
 @section('css')
 <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
 <style>
     .footer-section {
         position: relative !important;
-        bottom:0 !important;
+        bottom: 0 !important;
         width: 100% !important;
     }
-    #example_filter,#example_length {
+
+    #example_filter,
+    #example_length {
         margin-top: 10px;
     }
 </style>
@@ -49,7 +51,7 @@
                             <tr>
                                 <th>Name</th>
                                 <th>Email</th>
-                                <th>Role</th>
+                                <th>Designation</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -57,7 +59,7 @@
                             <tr>
                                 <td><a href="{{ url('/non-teaching/staff',$user->id) }}">{{ $user->name }}</td>
                                 <td>{{ $user->email }}</td>
-                                <td>{{ $user->role }}</td>
+                                <td>{{ $user->designation }}</td>
                             </tr>
                             @endforeach
                         </tbody>
@@ -72,8 +74,8 @@
 @section('js')
 <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 <script>
-    $(document).ready( function () {
+    $(document).ready(function() {
         $('#example').DataTable();
-    } );
+    });
 </script>
 @endsection

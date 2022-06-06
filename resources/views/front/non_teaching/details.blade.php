@@ -1,16 +1,18 @@
 @extends('front.layouts.app')
 
-@section('title','News & Events')
+@section('title','Non Teaching')
 
 @section('css')
 <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
 <style>
     .footer-section {
         position: relative !important;
-        bottom:0 !important;
+        bottom: 0 !important;
         width: 100% !important;
     }
-    #example_filter,#example_length {
+
+    #example_filter,
+    #example_length {
         margin-top: 10px;
     }
 </style>
@@ -56,21 +58,22 @@
                             </tr>
                             <tr>
                                 <td>
-                                <p style="text-align:center"><strong>{{ $users->name }}</strong><br>
-                                {{ $users->role }}&nbsp;</p>
-                    
-                                <p style="text-align:center"><strong>{{ $users->email }}</strong></p>
-                    <p style="text-align:center"><strong><a href="Pdfnew/Vision of the Vice Chancellor for this University. pdf.pdf" style="text-decoration: none;" target="_blank">Vision Document</a></strong></p>
-                    
+                                    <p style="text-align:center"><strong>{{ $users->name }}</strong><br>
+                                        {{ $users->role }}&nbsp;
+                                    </p>
+
+                                    <p style="text-align:center"><strong>{{ $users->email }}</strong></p>
+                                    <!-- <p style="text-align:center"><strong><a href="Pdfnew/Vision of the Vice Chancellor for this University. pdf.pdf" style="text-decoration: none;" target="_blank">Vision Document</a></strong></p> -->
+
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    </div>
     </div>
 </section>
 @endsection
@@ -78,8 +81,8 @@
 @section('js')
 <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 <script>
-    $(document).ready( function () {
+    $(document).ready(function() {
         $('#example').DataTable();
-    } );
+    });
 </script>
 @endsection
