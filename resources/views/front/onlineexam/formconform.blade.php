@@ -66,13 +66,13 @@
                                                 <label for="addmission">Admission/प्रवेश पाठ्यक्रम </label>
                                                 <select class="form-control custom-select" name="addmission" id="addmission" value="{{ old('addmission')}}" data-parsley-required-message="Please Select addmission" required="">
                                                     <option value="" selected>Select Admission</option>
-                                                    <option value="Ph.D" {{ ($formconform->addmission) ? 'selected' : ""}}>Ph.D</option>
-                                                    <option value="M.A." {{ ($formconform->addmission) ? 'selected' : ""}}>M.A. </option>
-                                                    <option value="B.A." {{ ($formconform->addmission) ? 'selected' : ""}}>B.A. </option>
-                                                    <option value="ACHARYA" {{ ($formconform->addmission) ? 'selected' : ""}}>ACHARYA </option>
-                                                    <option value="SHASTRI" {{ ($formconform->addmission) ? 'selected' : ""}}>SHASTRI </option>
-                                                    <option value="DIPLOMA" {{ ($formconform->addmission) ? 'selected' : ""}}>DIPLOMA </option>
-                                                    <option value="PG DIPLOMA" {{ ($formconform->addmission) ? 'selected' : ""}}>PG DIPLOMA </option>
+                                                    <option value="Ph.D" {{$formconform->addmission == 'Ph.D' ? 'selected' : ""}}>Ph.D</option>
+                                                    <option value="M.A." {{$formconform->addmission == 'M.A.' ? 'selected' : ""}}>M.A. </option>
+                                                    <option value="B.A." {{$formconform->addmission == 'B.A.' ? 'selected' : ""}}>B.A. </option>
+                                                    <option value="ACHARYA" {{$formconform->addmission == 'ACHARYA' ? 'selected' : ""}}>ACHARYA </option>
+                                                    <option value="SHASTRI" {{$formconform->addmission == 'SHASTRI' ? 'selected' : ""}}>SHASTRI </option>
+                                                    <option value="DIPLOMA" {{$formconform->addmission == 'DIPLOMA' ? 'selected' : ""}}>DIPLOMA </option>
+                                                    <option value="PG DIPLOMA" {{$formconform->addmission == 'PG DIPLOMA' ? 'selected' : ""}}>PG DIPLOMA </option>
                                                 </select>
                                                 @error('addmission')
                                                 <span class="error invalid-feedback">{{ $message }}</span>
@@ -85,9 +85,9 @@
                                                 <label for="addmission_year">Year/वर्ष </label>
                                                 <select class="form-control custom-select" name="addmission_year" id="addmission_year" value="{{ old('addmission_year')}}" data-parsley-required-message="Please Select addmission_year" required="">
                                                     <option value="" selected>Select Year</option>
-                                                    <option value="1st year" {{ ($formconform->addmission_year) ? 'selected' : ""}}>1st Year</option>
-                                                    <option value="2nd year" {{ ($formconform->addmission_year) ? 'selected' : ""}}>2nd Year </option>
-                                                    <option value="3rd year" {{ ($formconform->addmission_year) ? 'selected' : ""}}>3rd Year </option>
+                                                    <option value="1st year" {{ $formconform->addmission_year == '1st year' ? 'selected' : ""}}>1st Year</option>
+                                                    <option value="2nd year" {{ $formconform->addmission_year == '2nd year' ? 'selected' : ""}}>2nd Year </option>
+                                                    <option value="3rd year" {{ $formconform->addmission_year == '3rd year' ? 'selected' : ""}}>3rd Year </option>
                                                 </select>
                                                 @error('addmission_year')
                                                 <span class="error invalid-feedback">{{ $message }}</span>
@@ -170,8 +170,8 @@
                                                 <label for="gender">Gender/लिंग</label>
                                                 <select class="form-control custom-select" name="gender" id="gender" value="{{ old('gender')}}" data-parsley-required-message="Please Select Gender" required="">
                                                     <option value="" selected>Select Gender</option>
-                                                    <option value="male" {{ ('$formconform->gender') ? 'selected' : ""}}>Male/पुरुष</option>
-                                                    <option value="female" {{ ('$formconform->gender') ? 'selected' : ""}}>Female/महिला </option>
+                                                    <option value="male" {{ $formconform->gender == 'male' ? 'selected' : ""}}>Male/पुरुष</option>
+                                                    <option value="female" {{ $formconform->gender == 'female' ? 'selected' : ""}}>Female/महिला </option>
                                                 </select>
                                                 @error('gender')
                                                 <span class="error invalid-feedback">{{ $message }}</span>
@@ -274,11 +274,11 @@
                                                 <label for="caste">Caste </label>
                                                 <select class="form-control custom-select" name="caste" id="caste" value="{{ old('caste')}}" data-parsley-required-message="Please Select caste" required="">
                                                     <option value="" selected>Select Caste</option>
-                                                    <option value="GEN" {{ ($formconform->caste) ? 'selected' : ""}}>GEN</option>
-                                                    <option value="EWS" {{ ($formconform->caste) ? 'selected' : ""}}>EWS </option>
-                                                    <option value="OBC" {{ ($formconform->caste) ? 'selected' : ""}}>OBC </option>
-                                                    <option value="SC" {{ ($formconform->caste) ? 'selected' : ""}}>SC </option>
-                                                    <option value="ST" {{ ($formconform->caste) ? 'selected' : ""}}>ST </option>
+                                                    <option value="GEN" {{ $formconform->caste == 'GEN'? 'selected' : ""}}>GEN</option>
+                                                    <option value="EWS" {{ $formconform->caste == 'EWS'? 'selected' : ""}}>EWS </option>
+                                                    <option value="OBC" {{ $formconform->caste == 'OBC'? 'selected' : ""}}>OBC </option>
+                                                    <option value="SC" {{ $formconform->caste == 'SC'? 'selected' : ""}}>SC </option>
+                                                    <option value="ST" {{ $formconform->caste == 'ST'? 'selected' : ""}}>ST </option>
                                                 </select>
                                                 @error('caste')
                                                 <span class="error invalid-feedback">{{ $message }}</span>
@@ -301,8 +301,8 @@
                                                 <label for="disability_certificate">Disability Certificate/दिव्यांग श्रेणी</label>
                                                 <select class="form-control custom-select" name="disability_certificate" id="disability_certificate" value="{{ old('disability_certificate')}}" data-parsley-required-message="Please Select Disability Certificate" required="">
                                                     <option value="" selected>Select Disability Certificate</option>
-                                                    <option value="yes" {{ ($formconform->disability_certificate) ? 'selected' : ""}}>Yes</option>
-                                                    <option value="no" {{ ($formconform->disability_certificate) ? 'selected' : ""}}>No</option>
+                                                    <option value="yes" {{ $formconform->disability_certificate == 'yes' ? 'selected' : ""}}>Yes</option>
+                                                    <option value="no" {{ $formconform->disability_certificate == 'no' ? 'selected' : ""}}>No</option>
                                                 </select>
                                                 @error('disability_certificate')
                                                 <span class="error invalid-feedback">{{ $message }}</span>
@@ -335,9 +335,9 @@
                                                 <label for="payment">Payment Type/राशि श्रेणी</label>
                                                 <select class="form-control custom-select" name="payment_type" id="payment_type" value="{{ old('payment_type')}}" ata-parsley-required-message="Please Select Payment Mode" required="">
                                                     <option value="" selected>Select Payment Type</option>
-                                                    <option value="online" {{ ($formconform->payment_type) ? 'selected' : ""}}>Online</option>
-                                                    <option value="account" {{ ($formconform->payment_type) ? 'selected' : ""}}>Account</option>
-                                                    <option value="offine" {{ ($formconform->payment_type) ? 'selected' : ""}}>Offine</option>
+                                                    <option value="online" {{ $formconform->payment_type == 'online' ? 'selected' : ""}}>Online</option>
+                                                    <option value="account" {{ $formconform->payment_type == 'account' ? 'selected' : ""}}>Account</option>
+                                                    <option value="offine" {{ $formconform->payment_type == 'offine' ? 'selected' : ""}}>Offine</option>
                                                 </select>
                                                 @error('payment_type')
                                                 <span class="error invalid-feedback">{{ $message }}</span>
@@ -441,7 +441,7 @@
                                         <div class="address"><strong>Shri Kallaji Vedic Vishvavidyalaya</strong></div>
                                     </div>
                                     <div class="col md-4">
-                                        <img src="{{ asset('rv/WhatsApp Image 2022-05-21 at 3.16.08 PM.jpeg')}}" alt="" width="250px" ; height="250px;">
+                                        <img src="{{ asset('rv/qrcode.jpg')}}" alt="" width="250px" ; height="250px;">
                                     </div>
                                 </div>
                             </div>
