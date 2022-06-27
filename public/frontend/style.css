@@ -4,21 +4,22 @@
     /*    min-height: 100vh;*/
     /*    height: 100%;*/
     /*}*/
-    
+
     /*footer {*/
     /*    position: absolute;*/
     /*    bottom: 0;*/
     /*    width: 100%;*/
     /*}*/
 
-     body{
+    body {
         min-height: 100vh;
         display: flex;
         flex-direction: column;
     }
-    footer{
+
+    footer {
         margin-top: auto;
-    } 
+    }
 }
 
 .carousel-inner img {
@@ -41,8 +42,8 @@
 .mega-menu {
     overflow: hidden;
 }
-    
-.mega-menu .menubtn {  
+
+.mega-menu .menubtn {
     font-size: 13px !important;
     border: none;
     outline: none;
@@ -52,7 +53,7 @@
     margin: 0;
     text-transform: uppercase;
 }
-    
+
 .menu-content {
     display: none;
     position: absolute;
@@ -61,31 +62,31 @@
     margin-left: 40px;
     margin-right: 40px;
     left: 0;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     font-size: 12px;
     padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
-    
+
 .mega-menu:hover .menu-content {
     display: block;
 }
-    
+
 .menu-head {
     font-weight: bold;
     font-size: 15px;
     text-transform: uppercase;
 }
-    
+
 .column {
     float: left;
     width: 20%;
     background-color: white;
     height: 60%;
 }
-    
+
 .column a {
     float: none;
     color: black;
@@ -94,11 +95,11 @@
     display: block;
     text-align: left;
 }
-    
+
 .column a:hover {
     background-color: #ddd;
 }
-    
+
 .row:after {
     content: "";
     display: table;
@@ -147,12 +148,23 @@
     text-align: justify;
 }
 
-.testimony-section{
+.testimony-section {
     background-image: linear-gradient(to bottom, #F88158, #F2BB66);
 }
 
 .founder {
     color: #F87217;
+}
+
+@media (max-width:768px) {
+     .lazy-load-images {
+        width: 30%;
+        display: flex;
+        margin: auto;
+    }
+    .text {
+        margin-top: 1rem;
+    }
 }
 
 .chancellor {
@@ -194,7 +206,7 @@
     font-size: 14px;
 }
 
-.connect > .fa {
+.connect>.fa {
     padding: 10px;
     font-size: 20px;
     width: 40px;
@@ -229,11 +241,11 @@
     background-color: #FF8040;
 }
 
-#owl-demo .item{
+#owl-demo .item {
     margin: 3px;
 }
 
-#owl-demo .item img{
+#owl-demo .item img {
     display: block;
     width: 100%;
     height: auto;
@@ -300,12 +312,15 @@
     height: 400px;
 }
 
-.administration-table, .administration-th, .administration-td {
+.administration-table,
+.administration-th,
+.administration-td {
     border: 1px solid black;
     color: black;
 }
 
-.administration-th, .administration-td {
+.administration-th,
+.administration-td {
     padding-left: 10px;
 }
 
@@ -461,6 +476,7 @@
     color: white;
     padding: 10px;
 }
+
 .course-border {
     border-style: solid;
     border-width: 10px;
