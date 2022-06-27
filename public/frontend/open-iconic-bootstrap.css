@@ -7689,6 +7689,15 @@ textarea.form-control {
   .ftco-counter .counter-wrap {
     margin-bottom: 20px;
   }
+  .ftco-counter .text strong.number {
+    font-size: 22px;
+  }
+  .ftco-counter .text span {
+    font-size: 14px;
+  }
+  .ftco-counter .block-18 {
+    margin-bottom: 0;
+  }
 }
 
 .ftco-consult {

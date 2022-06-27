@@ -162,8 +162,9 @@
         display: flex;
         margin: auto;
     }
-    .text {
+    .foundertext .text {
         margin-top: 1rem;
+        font-size: 14px;
     }
 }
 
