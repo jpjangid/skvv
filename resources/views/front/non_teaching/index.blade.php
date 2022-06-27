@@ -46,7 +46,7 @@
                     Faculty list
                 </div>
                 <div class="container form">
-                    <table id="example" class="display" style="width:100%">
+                    <table id="example" class="display table-responsive" style="width:100%">
                         <thead>
                             <tr>
                                 <th>Name</th>
