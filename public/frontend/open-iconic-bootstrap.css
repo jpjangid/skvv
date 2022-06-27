@@ -6692,6 +6692,9 @@ h5,
     font-size: 15px !important;
     margin-right: 0;
   }
+  .dataTables_wrapper {
+    padding: 20px 0;
+  }
 }
 .services-2 .icon {
   line-height: 1;
