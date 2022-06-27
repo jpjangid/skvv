@@ -193,6 +193,22 @@
     color: white !important;
     padding-top: 30px;
 }
+@media (max-width:768px){
+    .footer-section .text-uppercase{
+        padding-left: 2rem !important;
+    }
+    .footer-section .contact {
+        padding-left: 1.5rem !important;
+    }
+    .footer-section .text-uppercase {
+        text-align: left !important;
+    }
+    .footer-section .connect {
+        text-align: left !important;
+        margin-left: 1.5rem !important;
+        margin-bottom: 1rem;
+    }
+}
 
 .list-info {
     list-style-type: none;
