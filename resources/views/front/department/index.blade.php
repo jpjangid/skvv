@@ -30,7 +30,7 @@
 
   .dept-intro {
     position: absolute;
-    bottom: 140px;
+    bottom: 70px;
   }
 
   .background_image {
@@ -50,7 +50,7 @@
   @media(max-width:576px) {
     .dept-intro {
       top: 10px;
-      padding: 0 15px 0 0;
+      /* padding: 0 15px 0 0; */
     }
 
     .background_image img {
@@ -73,10 +73,10 @@
   <div class="container-wrap my-3">
     <div class="row no-gutters">
       <div class="col-md-12">
+        <h1 class="text-uppercase section-heading text-center font-weight-bold">{{ $department->name }}</h1>
         <div class="container background_image">
           <img src="/frontend/images/SKVV_Logo.jpg" alt="" id="bg_img">
           <div class="dept-intro text-justify">
-            <h1 class="text-uppercase section-heading text-center font-weight-bold">{{ $department->name }}</h1>
             <p>{{ $department->short_des }}</p>
           </div>
         </div>
