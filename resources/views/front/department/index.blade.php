@@ -24,6 +24,15 @@
     overflow-x: hidden;
   }
 
+  .background_image {
+    /* background-image:url('/frontend/images/SKVV_Logo.jpg'); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    text-align: center;
+    position: relative;
+  }
+
   #bg_img {
     opacity: 0.3;
   }
@@ -35,21 +44,23 @@
 
   @media (max-width:768px) {
     .dept-intro {
-      position: relative;
+      bottom: 100px;
     }
   }
 
-  @media(max-width:576px) {
+  @media(max-width:425px) {
     .dept-intro {
       top: 10px;
       padding: 0 15px 0 0;
     }
     .background_image img {
-      display: none !important;
       width: 320px;
       display: flex;
       margin: auto;
       padding: 190px 0;
+    }
+    .background_image {
+      height: 160vh;
     }
     .dept-faculty h2{
       font-size: 20px;
