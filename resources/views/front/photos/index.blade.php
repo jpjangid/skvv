@@ -37,7 +37,7 @@
                       <div style="background-color: white;">
                         <div class="photo p-2">
                             <a href="#">
-                              <img src="{{ asset('storage/photo/'.$photo->image) }}" style="width: 100%; object-fit: contain;">
+                              <img src="{{ asset('storage/photo/'.$photo->image) }}" style="width: 100%; height:250px; object-fit: contain;">
                             </a>
                         </div>
                         <div class="photo-heading text-center">{{ $photo->short_des }}</div>
