@@ -24,15 +24,6 @@
     overflow-x: hidden;
   }
 
-  .background_image {
-    /* background-image:url('/frontend/images/SKVV_Logo.jpg'); */
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    text-align: center;
-    position: relative;
-  }
-
   #bg_img {
     opacity: 0.3;
   }
@@ -42,27 +33,35 @@
     bottom: 140px;
   }
 
+  .background_image {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    text-align: center;
+    position: relative;
+  }
+
   @media (max-width:768px) {
     .dept-intro {
-      bottom: 100px;
+      position: relative;
     }
   }
 
-  @media(max-width:425px) {
+  @media(max-width:576px) {
     .dept-intro {
       top: 10px;
       padding: 0 15px 0 0;
     }
+
     .background_image img {
+      display: none !important;
       width: 320px;
       display: flex;
       margin: auto;
       padding: 190px 0;
     }
-    .background_image {
-      height: 160vh;
-    }
-    .dept-faculty h2{
+
+    .dept-faculty h2 {
       font-size: 20px;
     }
   }
@@ -89,7 +88,7 @@
   <div class="container-wrap my-3">
     <div class="row no-gutters">
       <div class="col-md-12">
-      <div class="font-weight-bold text-center my-4">For department works please mail to skvv.uni@gmail.com</div>
+        <div class="font-weight-bold text-center my-4">For department works please mail to skvv.uni@gmail.com</div>
         <div class="dept-faculty">
           <h2 class="text-uppercase text-center text-light font-weight-bold">Faculty in Department of CS & IT</h2>
           <div id="owl-demo" class="owl-carousel owl-theme">
