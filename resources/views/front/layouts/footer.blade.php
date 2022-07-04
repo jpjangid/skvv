@@ -27,7 +27,7 @@
         <div class="col-md-4">
           <div class="text-uppercase col-heading font-weight-bold pl-5">Quick Links</div>
           <div class="col-info">
-            <ul class="list-info pl-5 ml-3">
+            <ul class="list-info contact pl-5 ml-3">
               <li>
                 <a href="{{ url('contact-us') }}" style="color: white;">Contact Us</a>
               </li>

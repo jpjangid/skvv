@@ -273,10 +273,13 @@ class OnlineExamController extends Controller
 
     public function test()
     {
-        $id = request()->session()->get('download.in.the.next.request');
+        $id = request()->session()->get('download.in.the.next.request') ?? 15;
         $data['OnlineExam'] = OnlineExam::find($id);
+        $data['QualificationDetails'] = QualificationDetails::where('onlineexam_id', $data['OnlineExam']->id)->get();
+        $data['Location'] = Location::find($data['OnlineExam']->location_id);
+        PDF::setOptions(['dpi' => 150, 'defaultFont' => 'hind-normal']);
         $pdf = PDF::loadView('front.onlineexam.formpdf', $data);
         request()->session()->forget('download.in.the.next.request');
-        return $pdf->download($data['OnlineExam']->student_name . 'addmission.pdf');
+        return $pdf->stream($data['OnlineExam']->student_name . 'addmission.pdf');
     }
 }

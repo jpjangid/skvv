@@ -7,7 +7,7 @@
     <div class="container-fluid my-4">
         <div class="row no gutters">
             <div class="col-md-3">
-                <table class="table table-bordered">
+                <table class="table table-bordered table-responsive">
                     <thead class="table-heading text-light font-weight-bold table-borderless">
                         <td>{{ $departments->name }}</td>
                     </thead>
@@ -20,7 +20,7 @@
                 <div class="contact-us-heading">
                     Courses Offered
                 </div>
-                <table class="table table-bordered">
+                <table class="table table-bordered table-responsive">
                     <thead>
                         <td class="font-weight-bold">Course Name</td>
                         <td class="font-weight-bold">Duration</td>

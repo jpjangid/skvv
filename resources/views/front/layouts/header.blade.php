@@ -4,35 +4,35 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
 @endphp
 <div class="bg-top navbar-light">
   <div class="container-fluid">
-    <div class="row no-gutters d-flex align-items-center align-items-stretch">
-      <div class="col-md d-flex align-items-center">
+    <div class="row d-flex align-items-center align-items-stretch">
+      <div class="align-items-center">
         <a class="navbar-brand">
           <img class="logo lazy-load-images" src="{{ asset('frontend/images/logo.jpg') }}" alt="">
         </a>
       </div>
       <div class="col-lg d-block">
-        <div class="row d-flex">
-          <div class="col-md d-flex topper align-items-center py-3">
-            <div class="icon d-flex justify-content-center align-items-center">
+        <div class="d-flex">
+          <div class="col-md topper align-items-center">
+            <div class="icon d-flex align-items-center">
+              <span>Email</span>
               <span class="fa fa-envelope">
               </span>
             </div>
             <div class="text">
-              <span>Email</span>
               <span>skvv.uni@gmail.com</span>
             </div>
           </div>
-          <div class="col-md d-flex topper align-items-center py-3">
-            <div class="icon d-flex justify-content-center align-items-center">
+          <div class="col-md topper align-items-center">
+            <div class="icon d-flex align-items-center">
+              <span>Call</span>
               <span class="fa fa-phone">
               </span>
             </div>
             <div class="text">
-              <span>Call</span>
               <span>Call Us: 01477 294 394</span>
             </div>
           </div>
-          <div class="col-md d-flex topper align-items-center py-3">
+          <div class="col-md d-flex topper align-items-center">
             <div class="text">
               <a href="{{ url('apply')}}">
                 <span>Addmission <img src="https://webanix.in/new.gif" alt=""></span>
@@ -76,16 +76,14 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
           </li>
           <div class="menu-content">
             <div class="row">
-              <div class="column">
+              <div class="col-6 column">
                 {{-- <div class="menu-head">ABC-XYZ</div> --}}
                 <a href="{{ url('recruitment') }}">Recruitment</a>
               </div>
-              <div class="row">
-                <div class="column">
+                <div class="col-6 column">
                   {{-- <div class="menu-head">ABC-XYZ</div> --}}
                   <a href="{{ url('non-teaching/staff') }}">Non-teaching Staff</a>
                 </div>
-              </div>
             </div>
           </div>
         </div>

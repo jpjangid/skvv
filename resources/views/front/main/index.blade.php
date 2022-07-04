@@ -73,15 +73,6 @@
               <span class="chancellor">events</span>
             </h2>
             @foreach($news as $new)
-            @if(!empty($new->link_url))
-            <a href="{{ $new->link_url }}">
-              <div class="text" style="text-transform: capitalize !important;">{{ strtolower($new->heading) }}
-                <p class="current-date"></p>
-                <div class="dropdown-divider">
-                </div>
-              </div>
-            </a>
-            @else
             <a href="{{ url('news-events',$new->slug) }}">
               <div class="text" style="text-transform: capitalize !important;">{{ strtolower($new->heading) }}
                 <p class="current-date"></p>
@@ -89,7 +80,6 @@
                 </div>
               </div>
             </a>
-            @endif
             @endforeach
           </div>
         </div>
@@ -156,7 +146,7 @@
 </section>
 <section class="ftco-section ftco-counter img py-3" id="section-counter" style="background-image: url({{asset('frontend/images/college.png')}}); background-position: 50% 50%;" data-stellar-background-ratio="0.5">
   <div class="container">
-    <div class="row justify-content-center mb-5 pb-2 d-flex">
+    <div class="row justify-content-center mb-2 pb-2 d-flex">
       <div class="col-md-6 align-items-stretch d-flex pt-4">
         <div class="img img-video d-flex align-items-center" style="background-image:url(https://brandtalks.in/kallajivedic/storage/slider/77d80aeb-bd0f-4d35-b8b7-f1b75c4848881651554820.jpg)">
           <div class="video justify-content-center">
@@ -174,13 +164,13 @@
     </div>
     <div class="row d-md-flex align-items-center justify-content-center mb-3">
       <div class="col-lg-12">
-        <div class="row d-md-flex align-items-center">
+        <div class="d-flex align-items-center">
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate fadeInUp ftco-animated">
             <div class="block-18">
-              <div class="icon">
+              <!-- <div class="icon">
                 <span class="flaticon-doctor">
                 </span>
-              </div>
+              </div> -->
               <div class="text">
                 <strong class="number" data-number="18">18</strong>
                 <span>Certified Teachers</span>
@@ -189,10 +179,10 @@
           </div>
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate fadeInUp ftco-animated">
             <div class="block-18">
-              <div class="icon">
+              <!-- <div class="icon">
                 <span class="flaticon-doctor">
                 </span>
-              </div>
+              </div> -->
               <div class="text">
                 <strong class="number" data-number="401">401</strong>
                 <span>Students</span>
@@ -201,10 +191,10 @@
           </div>
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate fadeInUp ftco-animated">
             <div class="block-18">
-              <div class="icon">
+              <!-- <div class="icon">
                 <span class="flaticon-doctor">
                 </span>
-              </div>
+              </div> -->
               <div class="text">
                 <strong class="number" data-number="30">30</strong>
                 <span>Courses</span>
@@ -213,10 +203,10 @@
           </div>
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate fadeInUp ftco-animated">
             <div class="block-18">
-              <div class="icon">
+              <!-- <div class="icon">
                 <span class="flaticon-doctor">
                 </span>
-              </div>
+              </div> -->
               <div class="text">
                 <strong class="number" data-number="50">50</strong>
                 <span>Awards Won</span>
@@ -228,29 +218,20 @@
     </div>
   </div>
 </section>
-<section class="container vc-info py-4 mt-4 mb-5">
+<section class="container vc-info py-4 mt-4">
   <h2 class="text-center text-uppercase font-weight-bold pb-5 mt-0">
     <span class="founder">founder</span> and
     <span class="chancellor"> vice chancellor</span>
   </h2>
   <div class="row">
     <div class="col-md-3">
-      <!--<div class="row">-->
-      <!--  <div class="col-md-5">-->
-      <!--    <img class="pl-5 lazy-load-images" width="85%" src="{{ asset('frontend/images/founder.webp') }}">-->
-      <!--  </div>-->
-      <!--  <div class="col-md pt-5">-->
-      <!--    <p class="text">Education is not preparation for life; education is life itself.</p>-->
-      <!--    <p class="float-right font-weight-bold founder">- Pandit Janardan Rai Nagar</p>-->
-      <!--  </div>-->
-      <!--</div>-->
     </div>
     <div class="col-md-6">
       <div class="row">
         <div class="col-md-5">
-          <img class="pl-5 lazy-load-images" width="90%" src="{{ asset('frontend/images/laxmi sharma vice chancellor.jpg') }}">
+          <img class="lazy-load-images" width="100%" src="{{ asset('frontend/images/laxmi sharma vice chancellor.jpg') }}">
         </div>
-        <div class="col-md pt-5 pr-5">
+        <div class="col-md foundertext">
           <p class="text">Education is the passport to the future, for tomorrow belongs to those who prepare for it today.</p>
           <p class="float-right font-weight-bold chancellor">- Prof. Laxmi Sharma</p>
         </div>
