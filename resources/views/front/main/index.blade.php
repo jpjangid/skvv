@@ -74,12 +74,13 @@
             </h2>
             @foreach($news as $new)
             <a href="{{ url('news-events',$new->slug) }}">
-              <div class="text" style="text-transform: capitalize !important;">{{ strtolower($new->heading) }}
+              <div class="text" style="text-transform: capitalize !important;">
+              <marquee direction="left"  class="text" style="text-transform: capitalize !important;">{{ strtolower($new->heading) }}</marquee>
                 <p class="current-date"></p>
                 <div class="dropdown-divider">
                 </div>
               </div>
-            </a>
+              </a>
             @endforeach
           </div>
         </div>

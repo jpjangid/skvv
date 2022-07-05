@@ -24,6 +24,11 @@ class NewsController extends Controller
       return view('front.pages.recruitment', compact('news'));
    }
 
+   public function act()
+   {
+      return view('front.pages.act');
+   }
+
    public function award()
    {
       $news = NewsEvents::where(['cat' => 'award'])->orderBy('created_at', 'asc')->take(10)->get();

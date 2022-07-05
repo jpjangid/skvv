@@ -395,14 +395,14 @@
                                                 </tr>
                                                 <tbody>
                                                     <tr>
-                                                        <td rowspan="2"><input type="text" class="form-control" name="qualifications[]" id="qualifications"></td>
-                                                        <td rowspan="2"><input type="text" class="form-control" name="name_of_board_university[]" id="name_of_board_university"></td>
-                                                        <td rowspan="2"><input type="text" class="form-control" name="passing_year[]" id="passing_year"></td>
-                                                        <td rowspan="2"><input type="text" class="form-control" name="quali_subject[]" id="quali_subject"></td>
-                                                        <td><input type="number" class="form-control" name="marks[]" id="marks"></td>
-                                                        <td><input type="number" class="form-control" name="total_marks[]" id="total_marks"></td>
-                                                        <td><input type="text" class="form-control" name="percentage[]" id="percentage"></td>
-                                                        <td><input type="text" class="form-control" name="grade[]" id="grade"></td>
+                                                        <td rowspan="2"><input type="text" class="form-control" name="qualifications[]" id="qualifications" data-parsley-required-message="This Field is Required" required=""></td>
+                                                        <td rowspan="2"><input type="text" class="form-control" name="name_of_board_university[]" id="name_of_board_university" data-parsley-required-message="This Field is Required" required=""></td>
+                                                        <td rowspan="2"><input type="text" class="form-control" name="passing_year[]" id="passing_year" data-parsley-required-message="This Field is Required" required=""></td>
+                                                        <td rowspan="2"><input type="text" class="form-control" name="quali_subject[]" id="quali_subject" data-parsley-required-message="This Field is Required" required=""></td>
+                                                        <td><input type="number" class="form-control" name="marks[]" id="marks" data-parsley-required-message="This Field is Required" required=""></td>
+                                                        <td><input type="number" class="form-control" name="total_marks[]" id="total_marks" data-parsley-required-message="This Field is Required" required=""></td>
+                                                        <td><input type="text" class="form-control" name="percentage[]" id="percentage" data-parsley-required-message="This Field is Required" required=""></td>
+                                                        <td><input type="text" class="form-control" name="grade[]" id="grade" data-parsley-required-message="This Field is Required" required=""></td>
                                                         <td></td>
                                                     </tr>
                                                 </tbody>

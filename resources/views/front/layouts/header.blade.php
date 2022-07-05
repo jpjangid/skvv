@@ -80,6 +80,12 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
                 {{-- <div class="menu-head">ABC-XYZ</div> --}}
                 <a href="{{ url('recruitment') }}">Recruitment</a>
               </div>
+
+              <div class="column">
+                {{-- <div class="menu-head">ABC-XYZ</div> --}}
+                <a href="{{ url('act') }}">Act</a>
+              </div>
+              
                 <div class="col-6 column">
                   {{-- <div class="menu-head">ABC-XYZ</div> --}}
                   <a href="{{ url('non-teaching/staff') }}">Non-teaching Staff</a>

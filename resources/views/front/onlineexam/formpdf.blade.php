@@ -70,7 +70,7 @@
                     </td>
                     <td colspan="11">
                         <h3 style="color: #ff5454; margin: 0;">Shree Kallaji Vedic Vishvavidyalaya</h3>
-                        <p style="margin: 0;">श्री कल्लाजी वैदिक विश्वविद्यालय</p>
+                        <!-- <p style="margin: 0;">श्री कल्लाजी वैदिक विश्वविद्यालय</p> -->
                         <h4 style="margin: 0;">JJ49+GWQ, Kalyanlok, Nimbahera, Chittorgarh, Rajasthan 312601</h4>
                     </td>
                     <td colspan="6">
