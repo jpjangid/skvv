@@ -20,7 +20,6 @@ class NewsController extends Controller
    public function recruitment()
    {
       $news = NewsEvents::where(['cat' => 'recruitment'])->get();
-      // dd($news);
       return view('front.pages.recruitment', compact('news'));
    }
 
@@ -39,5 +38,10 @@ class NewsController extends Controller
    {
       $news = NewsEvents::where(['cat' => 'award'])->orderBy('created_at', 'asc')->get();
       return view('front.pages.award_detail', compact('news'));
+   }
+   public function ugc()
+   {
+      $news = NewsEvents::where(['cat' => 'ugc', 'flag' => 0])->get();
+      return view('front.pages.ugc', compact('news'));
    }
 }

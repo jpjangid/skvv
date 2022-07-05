@@ -7,7 +7,7 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
     <div class="row d-flex align-items-center align-items-stretch">
       <div class="align-items-center">
         <a class="navbar-brand">
-          <img class="logo lazy-load-images" src="{{ asset('frontend/images/logo.jpg') }}" alt="">
+          <img class="logo lazy-load-images" src="{{ asset('frontend/images/skvvnewlogo.png') }}" alt="Shri Kallaji Vedic Vishvavidyalaya">
         </a>
       </div>
       <div class="col-lg d-block">
@@ -76,20 +76,21 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
           </li>
           <div class="menu-content">
             <div class="row">
-              <div class="col-6 column">
+              <div class="column col-md-3">
                 {{-- <div class="menu-head">ABC-XYZ</div> --}}
                 <a href="{{ url('recruitment') }}">Recruitment</a>
               </div>
 
-              <div class="column">
-                {{-- <div class="menu-head">ABC-XYZ</div> --}}
+              <div class="column col-md-3">
+                <a href="{{ url('ugc') }}">UGC</a>
+              </div>
+              <div class="column col-md-3">
                 <a href="{{ url('act') }}">Act</a>
               </div>
-              
-                <div class="col-6 column">
-                  {{-- <div class="menu-head">ABC-XYZ</div> --}}
-                  <a href="{{ url('non-teaching/staff') }}">Non-teaching Staff</a>
-                </div>
+
+              <div class="column col-md-3">
+                <a href="{{ url('non-teaching/staff') }}">Non-teaching Staff</a>
+              </div>
             </div>
           </div>
         </div>

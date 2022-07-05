@@ -117,6 +117,7 @@ Route::post('enquiry-us', [App\Http\Controllers\Front\EnquiryController::class, 
 Route::get('recruitment', [App\Http\Controllers\Front\NewsController::class, 'recruitment']);
 Route::get('award-achievements', [App\Http\Controllers\Front\NewsController::class, 'award']);
 Route::get('award-&-achievements', [App\Http\Controllers\Front\NewsController::class, 'awardAchievements']);
+Route::get('ugc', [App\Http\Controllers\Front\NewsController::class, 'ugc']);
 Route::get('act', [App\Http\Controllers\Front\NewsController::class, 'act']);
 
 
