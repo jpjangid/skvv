@@ -4855,6 +4855,12 @@ fieldset:disabled a.btn {
     width: 100%;
     background-color: #fff;
   }
+  .mega-menu .menu-content {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 150px;
+    min-height: 50px;
+}
   .navbar-collapse .mega-menu .mega-a{ 
     color: #000;
   }
