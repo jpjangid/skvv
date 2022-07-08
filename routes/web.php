@@ -85,6 +85,15 @@ Route::middleware(['auth', 'prevent'])->group(function () {
             Route::get('edit/{id}', [UserPermissionController::class, 'edit']);
             Route::post('store', [UserPermissionController::class, 'store']);
         });
+        Route::prefix('onlineexam')->group(function () {
+            Route::get('/', [OnlineExamController::class, 'index']);
+            Route::get('create', [OnlineExamController::class, 'create']);
+            Route::post('store', [OnlineExamController::class, 'store']);
+            Route::get('edit/{onlineexam}', [OnlineExamController::class, 'edit'])->name('onlineexam.edit');
+            Route::put('update/{id}', [OnlineExamController::class, 'update']);
+            Route::delete('delete/{id}', [OnlineExamController::class, 'destroy']);
+            Route::get('stud_pdf/{id}', [OnlineExamController::class, 'student_pdf']);
+        });
 
         //Route for roles permissions
         Route::get('role/permissions', [RolePermissionController::class, 'index']);
@@ -92,14 +101,6 @@ Route::middleware(['auth', 'prevent'])->group(function () {
         Route::post('rolepermissions/store', [RolePermissionController::class, 'store']);
     });
 
-    Route::prefix('onlineexam')->group(function () {
-        Route::get('/', [OnlineExamController::class, 'index']);
-        Route::get('create', [OnlineExamController::class, 'create']);
-        Route::post('store', [OnlineExamController::class, 'store']);
-        Route::get('edit/{onlineexam}', [OnlineExamController::class, 'edit'])->name('onlineexam.edit');
-        Route::put('update/{id}', [OnlineExamController::class, 'update']);
-        Route::delete('delete/{id}', [OnlineExamController::class, 'destroy']);
-    });
 
     //Route for Get State City //
     Route::post('get-city-list', [UserController::class, 'getCity']);
@@ -119,7 +120,7 @@ Route::get('award-achievements', [App\Http\Controllers\Front\NewsController::cla
 Route::get('award-&-achievements', [App\Http\Controllers\Front\NewsController::class, 'awardAchievements']);
 Route::get('ugc', [App\Http\Controllers\Front\NewsController::class, 'ugc']);
 Route::get('act', [App\Http\Controllers\Front\NewsController::class, 'act']);
-
+Route::get('syllabus', [App\Http\Controllers\Front\HomeController::class, 'syllabus']);
 
 // Create Permission
 Route::view('per', 'per');

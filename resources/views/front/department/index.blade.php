@@ -90,12 +90,12 @@
       <div class="col-md-12">
         <div class="font-weight-bold text-center my-4">For department works please mail to skvv.uni@gmail.com</div>
         <div class="dept-faculty">
-          <h2 class="text-uppercase text-center text-light font-weight-bold">Faculty in Department of CS & IT</h2>
+          <h2 class="text-uppercase text-center text-light font-weight-bold">Faculty in Department of {{ $department->name }}</h2>
           <div id="owl-demo" class="owl-carousel owl-theme">
-            <!--<div class="item pl-4">-->
-            <!--  <img src="{{ asset('frontend/images/pic-1.jpg') }}" alt="Owl Image" style="width: 60%; border-radius: 10%;">-->
-            <!--  <span class="faculty-name">abcdef</span>-->
-            <!--</div>-->
+            <div class="item pl-4">
+              <img src="{{ asset('frontend/images/pic-1.jpg') }}" alt="Owl Image" style="width: 60%; border-radius: 10%;">
+              <span class="faculty-name">abcdef</span>
+            </div>
           </div>
         </div>
       </div>
@@ -110,14 +110,12 @@
         <div class="container courses-offered">
           <div class="row">
             <div class="col-md-6 my-2">
-              @foreach($courses as $course)
-              <a href={{ route('front.course',['department' => $course->department->slug]) }} style="color: white">
-                <div class="dept-course p-3 mb-2">{{ $course->name }}</div>
+              <a href="" style="color: white">
+                <div class="dept-course p-3 mb-2">dcdfg</div>
               </a>
-              @endforeach
             </div>
             <div class="col-md-6 my-2">
-              <img src="./images/courses.jpg" alt="" width="91%">
+              <img src="https://i1.wp.com/thecostaricanews.com/wp-content/uploads/2019/03/The-World-Connected-through-the-WWW.jpg?fit=1280%2C720&ssl=1" alt="" width="100%">
             </div>
           </div>
         </div>

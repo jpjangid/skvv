@@ -65,14 +65,14 @@
                                             <div class="form-group">
                                                 <label for="addmission">Admission/प्रवेश पाठ्यक्रम </label>
                                                 <select class="form-control custom-select" name="addmission" id="addmission" value="{{ $formconform->addmission }}" data-parsley-required-message="Please Select addmission" required="">
-                                                    <option value="" >Select Admission</option>
-                                                    <option value="Ph.D"          {{ ($formconform->addmission == 'Ph.D') ? 'selected' : ''}} >Ph.D</option>
-                                                    <option value="M.A."          {{ ($formconform->addmission == 'M.A') ? 'selected' : ''}} >M.A. </option>
-                                                    <option value="B.A."          {{ ($formconform->addmission == 'B.A.') ? 'selected' : ''}} >B.A. </option>
-                                                    <option value="ACHARYA"       {{ ($formconform->addmission == 'ACHARYA') ? 'selected' : ''}} >ACHARYA </option>
-                                                    <option value="SHASTRI"      {{ ($formconform->addmission == 'SHASTRI') ? 'selected'  : ''}} >SHASTRI </option>
-                                                    <option value="DIPLOMA"      {{ ($formconform->addmission == 'DIPLOMA') ? 'selected'  : ''}} >DIPLOMA </option>
-                                                    <option value="PG DIPLOMA"   {{ ($formconform->addmission == 'PG DIPLOMA') ? 'selected'  : ''}} >PG DIPLOMA </option>
+                                                    <option value="">Select Admission</option>
+                                                    <option value="Ph.D" {{ ($formconform->addmission == 'Ph.D') ? 'selected' : ''}}>Ph.D</option>
+                                                    <option value="M.A." {{ ($formconform->addmission == 'M.A') ? 'selected' : ''}}>M.A. </option>
+                                                    <option value="B.A." {{ ($formconform->addmission == 'B.A.') ? 'selected' : ''}}>B.A. </option>
+                                                    <option value="ACHARYA" {{ ($formconform->addmission == 'ACHARYA') ? 'selected' : ''}}>ACHARYA </option>
+                                                    <option value="SHASTRI" {{ ($formconform->addmission == 'SHASTRI') ? 'selected'  : ''}}>SHASTRI </option>
+                                                    <option value="DIPLOMA" {{ ($formconform->addmission == 'DIPLOMA') ? 'selected'  : ''}}>DIPLOMA </option>
+                                                    <option value="PG DIPLOMA" {{ ($formconform->addmission == 'PG DIPLOMA') ? 'selected'  : ''}}>PG DIPLOMA </option>
                                                 </select>
                                                 @error('addmission')
                                                 <span class="error invalid-feedback">{{ $message }}</span>
@@ -401,14 +401,14 @@
                                                     @foreach( $qualoficationdetails as $qualoficationdetail)
                                                     @if(!empty($qualoficationdetail))
                                                     <tr>
-                                                        <td><input type="text" class="form-control" name="qualifications[]" id="qualifications" value="{{ $qualoficationdetail->qualifications}}" ></td>
-                                                        <td><input type="text" class="form-control" name="name_of_board_university[]" id="name_of_board_university" value="{{ $qualoficationdetail->qualificationsname_of_board_university}}" ></td>
-                                                        <td><input type="text" class="form-control" name="passing_year[]" id="passing_year" value="{{ $qualoficationdetail->passing_year}}" ></td>
-                                                        <td><input type="text" class="form-control" name="quali_subject[]" id="quali_subject" value="{{ $qualoficationdetail->subject}}" ></td>
-                                                        <td><input type="number" class="form-control" name="marks[]" id="marks" value="{{ $qualoficationdetail->marks}}" ></td>
-                                                        <td><input type="number" class="form-control" name="total_marks[]" id="total_marks" value="{{ $qualoficationdetail->total_marks}}" ></td>
-                                                        <td><input type="text" class="form-control" name="percentage[]" id="percentage" value="{{ $qualoficationdetail->percentage}}" ></td>
-                                                        <td><input type="text" class="form-control" name="grade[]" id="grade" value="{{ $qualoficationdetail->grade}}" ></td>
+                                                        <td><input type="text" class="form-control" name="qualifications[]" id="qualifications" value="{{ $qualoficationdetail->qualifications}}"></td>
+                                                        <td><input type="text" class="form-control" name="name_of_board_university[]" id="name_of_board_university" value="{{ $qualoficationdetail->qualificationsname_of_board_university}}"></td>
+                                                        <td><input type="text" class="form-control" name="passing_year[]" id="passing_year" value="{{ $qualoficationdetail->passing_year}}"></td>
+                                                        <td><input type="text" class="form-control" name="quali_subject[]" id="quali_subject" value="{{ $qualoficationdetail->subject}}"></td>
+                                                        <td><input type="number" class="form-control" name="marks[]" id="marks" value="{{ $qualoficationdetail->marks}}"></td>
+                                                        <td><input type="number" class="form-control" name="total_marks[]" id="total_marks" value="{{ $qualoficationdetail->total_marks}}"></td>
+                                                        <td><input type="text" class="form-control" name="percentage[]" id="percentage" value="{{ $qualoficationdetail->percentage}}"></td>
+                                                        <td><input type="text" class="form-control" name="grade[]" id="grade" value="{{ $qualoficationdetail->grade}}"></td>
                                                         <td></td>
                                                     </tr>
                                                     @endif

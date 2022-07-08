@@ -99,6 +99,7 @@ class OnlineExamController extends Controller
 
     public function onlineexamstore(Request $request)
     {
+        // dd($request->all());
         $cast_certificate = "";
         if ($request->hasFile('cast_certificate')) {
             $extension = $request->file('cast_certificate')->extension();

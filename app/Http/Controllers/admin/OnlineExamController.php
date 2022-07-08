@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Location;
 use App\Models\QualificationDetails;
+use PDF;
 
 class OnlineExamController extends Controller
 {
@@ -320,5 +321,15 @@ class OnlineExamController extends Controller
     public function destroy(OnlineExam $onlineExam)
     {
         //
+    }
+
+    public function student_pdf($id)
+    {
+        $data['OnlineExam'] = OnlineExam::find($id);
+        $data['QualificationDetails'] = QualificationDetails::where('onlineexam_id', $data['OnlineExam']->id)->get();
+        $data['Location'] = Location::find($data['OnlineExam']->location_id);
+        PDF::setOptions(['dpi' => 150, 'defaultFont' => 'hind-normal']);
+        $pdf = PDF::loadView('admin.onlineexam.student_pdf', $data);
+        return $pdf->stream($data['OnlineExam']->student_name . 'addmission.pdf');
     }
 }

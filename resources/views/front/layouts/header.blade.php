@@ -52,15 +52,6 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
         <i class="fa fa-bars" style="color:#fff; font-size:28px;"></i>
       </span>
     </button>
-    <!--<form action="" class="searchform order-lg-last">-->
-    <!--  <div class="form-group d-flex">-->
-    <!--    <input type="text" class="form-control pl-3" placeholder="Search">-->
-    <!--    <button type="submit" placeholder="" class="form-control search">-->
-    <!--      <span class="fa fa-search">-->
-    <!--      </span>-->
-    <!--    </button>-->
-    <!--  </div>-->
-    <!--</form>-->
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav mr-auto">
         <div class="mega-menu">
@@ -188,11 +179,56 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
               </div>
             </div> --}}
   </div>
-  {{-- <div class="mega-menu">
-            <li class="menubtn">
-              <a class="mega-a" href="">Register</a>
-            </li>
-          </div> --}}
+  <!-- <div class="mega-menu">
+    <li class="menubtn">
+      <a class="mega-a" href="{{ url('syllabus')}}">Syllabus</a>
+    </li>
+  </div> -->
+  <!-- <div class="mega-menu">
+    <li class="menubtn">
+      <a class="mega-a" href="">Research
+        <i class="fa fa-caret-down"></i>
+      </a>
+    </li>
+    <div class="menu-content">
+      <div class="row">
+        <div class="column col-md-11">
+          <a href="{{ url('syllabus')}}">Syllabus</a>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <div class="mega-menu">
+    <li class="menubtn"><a class="mega-a" href="">Research<i class="fa fa-caret-down"></i></a></li>
+    <div class="menu-content">
+      <div class="row">
+        <div class="column col-md-12">
+          <div class="menu-head">Syllabus</div>
+          <!-- <a href="{{ url('news-events') }}">News & Events</a>
+          <a href="{{ route('front.photo.gallery') }}">Photo Gallery</a>
+          <a href="{{ route('front.video.gallery') }}">Video Gallery</a> -->
+        </div>
+        <div class="column col-md-3">
+          <a href="{{ asset('frontend/images/Paper-I_English.pdf') }}" target="_blank">English</a>
+        </div>
+        <div class="column col-md-3">
+          <a href="{{ asset('frontend/images/Hindi-20.pdf') }}" target="_blank">Hindi</a>
+        </div>
+        <div class="column col-md-3">
+          <a href="{{ asset('frontend/images/Paper-I_Hindi-00.pdf') }}" target="_blank">Hindi-1</a>
+        </div>
+        <div class="column col-md-3">
+          <a href="{{ asset('frontend/images/SANSKRIT-25.pdf') }}" target="_blank">SANSKRIT</a>
+        </div>
+        <div class="column col-md-3">
+          <a href="{{ asset('frontend/images/Sanskrit Traditional-73.pdf') }}" target="_blank">Sanskrit Traditional</a>
+        </div>
+        <div class="column col-md-3">
+          <a href="{{ asset('frontend/images/Yoga-100.pdf') }}" target="_blank">Yoga</a>
+        </div>
+      </div>
+    </div>
+  </div>
   </ul>
   </div>
   <ul class="nav navbar-nav navbar-right" id="search-form">

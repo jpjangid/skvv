@@ -43,6 +43,7 @@
                                 <th scope="col">Mobile No</th>
                                 <th scope="col">Gender</th>
                                 <th scope="col">payment type</th>
+                                <th scope="col">PDF</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -62,6 +63,7 @@
                                 <td>{{ $onlineexam->mobile_no}}</td>
                                 <td>{{ $onlineexam->gender}}</td>
                                 <td>{{ $onlineexam->payment_type}}</td>
+                                <td><a class="btn btn-warning btn-sm mr-1" href="{{ url('admin/onlineexam/stud_pdf',['id'=>$onlineexam->id ]) }}"><i class="fas fa-receipt"></i></a></td>
                                 <td class="text-right">
                                     <div class="dropdown">
                                         <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

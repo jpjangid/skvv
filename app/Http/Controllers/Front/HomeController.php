@@ -20,12 +20,12 @@ class HomeController extends Controller
     public function index()
     {
         $date = date('Y-m-d');
-        $sliders = Slider::orderBy('updated_at','asc')->get();
+        $sliders = Slider::orderBy('updated_at', 'asc')->get();
         $news = NewsEvents::where('flag', 0)->where('display_date', '<=', $date)->where('last_date', '>=', $date)->take(10)->get();
-        $topCourses = Course::where(['flag' => 0,'status' => 0,'top_course' => 1])->with('department.college')->get();
-        $alumnispeaks = alumnispeak::where(['flag' => 0,'status' => 0])->get();
+        $topCourses = Course::where(['flag' => 0, 'status' => 0, 'top_course' => 1])->with('department.college')->get();
+        $alumnispeaks = alumnispeak::where(['flag' => 0, 'status' => 0])->get();
 
-        return view('front.main.index',compact('sliders','news','topCourses','alumnispeaks'));
+        return view('front.main.index', compact('sliders', 'news', 'topCourses', 'alumnispeaks'));
     }
 
     /**
@@ -92,5 +92,9 @@ class HomeController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function syllabus()
+    {
+        return view('front.pages.syllabus');
     }
 }
