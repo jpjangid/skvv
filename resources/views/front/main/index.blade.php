@@ -65,27 +65,35 @@
 <section class="ftco-section ftco-no-pt ftc-no-pb">
   <div class="container">
     <div class="row d-flex">
-      <div class="col-md-5 order-md-last wrap-about wrap-about d-flex align-items-stretch">
+      <div class="col-md-5 py-3 order-md-last wrap-about wrap-about d-flex align-items-stretch">
         <div class="news-section" style="width: 100%">
-          <div class="border border-2 border-dark my-4 px-4 in-news-section">
+          <div class="border border-2 border-dark px-4 in-news-section">
             <h2 class="section-heading py-3 font-weight-bold text-uppercase">
               <span class="founder">news </span>&
               <span class="chancellor">events</span>
             </h2>
+            <div class="container1 blur">
             @foreach($news as $new)
             <a href="{{ url('news-events',$new->slug) }}">
-              <div class="text" style="text-transform: capitalize !important;">
-              <marquee direction="left"  class="text" style="text-transform: capitalize !important;">{{ strtolower($new->heading) }}</marquee>
-                <p class="current-date"></p>
-                <div class="dropdown-divider">
-                </div>
-              </div>
+              <!-- <div class="text" style="text-transform: capitalize !important;"> -->
+              <!-- <marquee direction="left"  class="text" style="text-transform: capitalize !important;">{{ strtolower($new->heading) }}</marquee> -->
+              
+                  <ul class="slider">
+                    <li>{{ strtolower($new->heading) }}</li>
+                    <hr>
+                  </ul>
+              
+                <!-- <p class="current-date"></p> -->
+                <!-- <div class="dropdown-divider">
+                </div> -->
+              <!-- </div> -->
               </a>
             @endforeach
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-md-7 wrap-about py-2 pr-md-4 ftco-animate fadeInUp ftco-animated">
+      <div class="col-md-7 py-3 wrap-about pr-md-4 ftco-animate fadeInUp ftco-animated">
         <h2 class="section-heading text-uppercase mb-2 mt-3 font-weight-bold">
           <span class="founder">what</span> we
           <span class="chancellor"> offer</span>
@@ -277,8 +285,8 @@
     <div class="container">
       <div class="row">
         @foreach($topCourses as $topCourse)
-        <div class="col-md-4 course ftco-animate fadeInUp ftco-animated">
-          <div class="course-border mr-2">
+        <div class="col-lg-4 col-md-6 col-12 course ftco-animate fadeInUp ftco-animated">
+          <div class="course-border">
             <div class="text py-3 px-2">
               <h3 class="text-center top-department font-weight-bold">
                 {{ $topCourse->name }}
@@ -292,7 +300,7 @@
     </div>
   </div>
 </section>
-<section class="testimony-section py-4">
+<!-- <section class="testimony-section py-4">
   <div class="container">
     <div class="row justify-content-center pb-2">
       <div class="col-md-8 text-center heading-section ftco-animate fadeInUp ftco-animated">
@@ -332,7 +340,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <section class="ftco-gallery">
   <div class="container-wrap">
     <div class="row justify-content-center my-4 no-gutters">
@@ -411,4 +419,33 @@
     </div>
   </div>
 </section>
+@endsection
+
+@section('js')
+<script>
+  alert("hellos");
+  $(document).ready(function() {
+    $(".owl-carousel").owlCarousel({
+      navigation : true
+      loop:true,
+    // margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:3,
+            nav:true
+        },
+        1000:{
+            items:4,
+            nav:true,
+            loop:true
+        }
+    }
+    });
+});
+</script>
 @endsection

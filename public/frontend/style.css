@@ -19,6 +19,64 @@
     }
 }
 
+
+.container1 {
+    width: 20em;
+    height: 25em;
+    margin: 2em auto;
+    overflow: hidden;
+    background: #ffffff;
+    position: relative;
+}
+
+.slider {
+    top: 1em;
+    position: relative;
+    box-sizing: border-box;
+    animation: slider 15s linear infinite;
+    list-style-type: none;
+    text-align: center;
+}
+
+.slider:hover {
+    animation-play-state: paused;
+}
+
+@keyframes slider {
+    0%   { top:   10em }
+    100% { top: -14em }
+}
+
+.blur .slider {
+  	margin: 0;
+    padding: 0 1em;
+    line-height: 1.5em;
+}
+
+.blur:before, .blur::before,
+.blur:after,  .blur::after {
+    left: 0;
+    z-index: 1;
+    content: '';
+    position: absolute;
+    width: 100%; 
+    height: 2em;
+    background-image: linear-gradient(180deg, #FFF, rgba(255,255,255,0));
+}
+
+.blur:after, .blur::after {
+    bottom: 0;
+    transform: rotate(180deg);
+}
+
+.blur:before, .blur::before {
+    top: 0;
+}
+
+p {
+  font-family: helvetica, arial, sans serif;
+}
+
 .carousel-inner img {
     width: 100%;
 }
@@ -55,16 +113,17 @@
     display: none;
     position: absolute;
     background-color: white;
-    width: 70%;
+    /* width: 70%; */
     margin-left: 40px;
     margin-right: 40px;
-    left: 0;
+    /* left: 0; */
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     font-size: 12px;
     padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+    padding-right: 20px;
 }
 
 .mega-menu:hover .menu-content {
@@ -79,7 +138,7 @@
 
 .column {
     float: left;
-    width: 20%;
+    /* width: 20%; */
     background-color: white;
     height: 60%;
 }
@@ -154,6 +213,9 @@
 }
 
 @media (max-width:768px) {
+    .web-img {
+        width: 50%!important;
+    }
     .lazy-load-images {
         width: 30%;
         display: flex;
@@ -265,13 +327,14 @@
     width: 100%;
     height: 200px;
     object-fit: cover;
+    border-radius: 5px;
 }
 
 @media (max-width: 768px) {
     #owl-demo .item img {
         display: block;
         width: 100%;
-        height: 100px;
+        /* height: 100px; */
         object-fit: cover;
     }
     .ftco-gallery .no-gutters {
@@ -280,7 +343,7 @@
 }
 
 .top-department {
-    height: 90px;
+    /* height: 90px; */
 }
 
 .contact-us-heading {
@@ -321,6 +384,9 @@
 
 .dept-faculty {
     background-image: linear-gradient(to bottom, #F88158, #F2BB66);
+}
+.dept-faculty h2 {
+    padding:15px 0;
 }
 
 .dept-course {
@@ -364,7 +430,7 @@
 .faculty-name {
     color: white;
     text-align: center;
-    margin-left: 8%;
+    /* margin-left: 8%; */
 }
 
 .apply-heading {
@@ -409,7 +475,7 @@
     border-image-slice: 60 30;
 }
 
-#search-form {
+/* #search-form {
     padding-left: 600px;
 }
 
@@ -483,7 +549,7 @@
     #search-form {
         padding-left: 0px;
     }
-}
+} */
 
 .search-field {
     border: none;
@@ -510,6 +576,7 @@
     border-width: 10px;
     border-image: linear-gradient(to right, red, orange);
     border-image-slice: 60 30;
+    height: 100%;
 }
 
 .media-dropdown a {

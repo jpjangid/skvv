@@ -74,6 +74,50 @@
     <div class="row no-gutters">
       <div class="col-md-12">
         <h1 class="text-uppercase section-heading text-center font-weight-bold">{{ $department->name }}</h1>
+        <div class="profile_section">
+          <div class="container">
+            <div class="row m-0 py-4">
+              <!-- <div class="col-2"></div> -->
+              <div class="col-lg-6 col-md-6 col-12 pb-2">
+                <div class="img_content">
+                  <div class="row m-0 py-3">
+                    <div class="col-lg-5 col-12 d-flex align-items-center">
+                    <div class="profile_dashboard">
+                    <img src="https://img.freepik.com/premium-photo/young-handsome-man-with-beard-isolated-keeping-arms-crossed-frontal-position_1368-132662.jpg?w=2000" alt="">
+                  </div>
+                    </div>
+                    <div class="col-lg-7 col-12 d-flex align-items-center">
+                    <div class="content">
+                    <p class="text-justify">Education is the passport to the future, for tomorrow belongs to those who prepare for it today.</p>
+                    <p class="text-right text-warning name_content">FOUNDER AND VICE CHANCELLOR</p>
+                    <p class="text-right text-warning m-0 name_content">- Prof. Laxmi Sharma</p>
+                  </div>
+                    </div>
+                  </div>  
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-12 pb-2">
+                <div class="img_content">
+                  <div class="row m-0 py-3">
+                    <div class="col-lg-5 col-12 d-flex align-items-center">
+                    <div class="profile_dashboard">
+                    <img src="https://img.freepik.com/premium-photo/young-handsome-man-with-beard-isolated-keeping-arms-crossed-frontal-position_1368-132662.jpg?w=2000" alt="">
+                  </div>
+                    </div>
+                    <div class="col-lg-7 col-12 d-flex align-items-center">
+                    <div class="content">
+                    <p class="text-justify">Education is the passport to the future, for tomorrow belongs to those who prepare for it today.</p>
+                    <p class="text-right text-warning name_content">FOUNDER AND VICE CHANCELLOR</p>
+                    <p class="text-right text-warning m-0 name_content">- Prof. Laxmi Sharma</p>
+                  </div>
+                    </div>
+                  </div>  
+                </div>
+              </div>
+              <!-- <div class="col-2"></div> -->
+            </div>
+          </div>
+        </div>
         <div class="container background_image">
           <img src="/frontend/images/SKVV_Logo.jpg" alt="" id="bg_img">
           <div class="dept-intro text-justify">
@@ -89,13 +133,43 @@
     <div class="row no-gutters">
       <div class="col-md-12">
         <div class="font-weight-bold text-center my-4">For department works please mail to skvv.uni@gmail.com</div>
-        <div class="dept-faculty">
-          <h2 class="text-uppercase text-center text-light font-weight-bold">Faculty in Department of {{ $department->name }}</h2>
-          <div id="owl-demo" class="owl-carousel owl-theme">
-            <div class="item pl-4">
-              <img src="{{ asset('frontend/images/pic-1.jpg') }}" alt="Owl Image" style="width: 60%; border-radius: 10%;">
-              <span class="faculty-name">abcdef</span>
+        <div class="dept-faculty pb-3">
+          <h2 class="slider_heading text-uppercase text-center text-light font-weight-bold">Faculty in Department of {{ $department->name }}</h2>
+          <!-- <div id="owl-demo" class="owl-carousel owl-theme pb-3"> -->
+            <!-- <div class="item">
+              <img src="https://skvv.ac.in/frontend/images/vedic71.jpg" alt="Owl Image">
+              <div class="text-center">
+                <span class="faculty-name">P. Yogesh Ji Sharma</span>
+              </div>
+            </div> -->
+          <!-- </div> -->
+          <div class="row m-0">
+          <div class="col-lg-2 col-md-1 col-0"></div>
+            <div class="col-lg-4 col-md-5 col-12">
+              <div class="item">
+                <div class="profile_img" style="width:200px;height:200px;margin:auto;">
+                  <img src="https://skvv.ac.in/frontend/images/vedic71.jpg" alt="Owl Image" width="100%" height="100%" style="border-radius:10px;">
+                </div>
+                <div class="text-center">
+                  <span class="faculty-name">P. Yogesh Ji Sharma</span>
+                  <br>
+                  <span class="faculty-name">Assistant Prof.</span>
+                </div>
+              </div>
             </div>
+            <div class="col-lg-4 col-md-5 col-12">
+              <div class="item">
+                <div class="profile_img" style="width:200px;height:200px;margin:auto;">
+                  <img src="https://skvv.ac.in/frontend/images/vedic71.jpg" alt="Owl Image" width="100%" height="100%" style="border-radius:10px;">
+                </div>
+                <div class="text-center">
+                  <span class="faculty-name">P. Yogesh Ji Sharma</span>
+                  <br>
+                  <span class="faculty-name">Assistant Prof.</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-1 col-0"></div>
           </div>
         </div>
       </div>
@@ -109,13 +183,25 @@
         <h2 class="text-uppercase text-center font-weight-bold">Courses Offered</h2>
         <div class="container courses-offered">
           <div class="row">
-            <div class="col-md-6 my-2">
-              <a href="" style="color: white">
-                <div class="dept-course p-3 mb-2">dcdfg</div>
-              </a>
+            <div class="col-md-6 my-2 text-center">
+              <img src="https://www.mdcnayagarh.org.in/img/courses/cc1.png" alt="">
             </div>
-            <div class="col-md-6 my-2">
-              <img src="https://i1.wp.com/thecostaricanews.com/wp-content/uploads/2019/03/The-World-Connected-through-the-WWW.jpg?fit=1280%2C720&ssl=1" alt="" width="100%">
+            <div class="col-md-6 my-2 text-capitalize">
+              <a href="" style="color: white">
+                <div class="dept-course p-3 mb-2">jyotish</div>
+              </a>
+              <a href="" style="color: white">
+                <div class="dept-course p-3 mb-2">agamasastra</div>
+              </a>
+              <a href="" style="color: white">
+                <div class="dept-course p-3 mb-2">dharmasastra</div>
+              </a>
+              <a href="" style="color: white">
+                <div class="dept-course p-3 mb-2">vyakarana</div>
+              </a>
+              <a href="" style="color: white">
+                <div class="dept-course p-3 mb-2">paurohitya</div>
+              </a>
             </div>
           </div>
         </div>
@@ -124,7 +210,7 @@
   </div>
 </section>
 
-<section class="dept-profile">
+<!-- <section class="dept-profile">
   <div class="container-wrap my-3 dept-faculty">
     <div class="row no-gutters">
       <div class="col-md-12">
@@ -152,7 +238,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 @endsection
 
 @section('js')
@@ -180,5 +266,27 @@
   }
   var today = dd + '-' + mm + '-' + yyyy;
   $(".current-date").text(today);
+</script>
+<script>
+  $('.owl-carousel').owlCarousel({
+    loop:true,
+    // margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:3,
+            nav:true
+        },
+        1000:{
+            items:4,
+            nav:true,
+            loop:true
+        }
+    }
+})
 </script>
 @endsection
