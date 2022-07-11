@@ -23,38 +23,38 @@
 <section class="short-links">
   <div class="container-fluid">
     <div class="row">
-      <div class="col short-column-1 p-3 text-center">
-        <a href="{{url('admission')}}" class="short-column-1">
+      <div class="col-lg-2 col-4 short-column-1 p-3 text-center">
+        <a  href="{{url('admission')}}" class="short-column-1 anchor_text">
           <i class="fa fa-university icon"></i>
           <br>Online
           <br>Admissions</a>
       </div>
-      <div class="col short-column-2 p-3 text-center">
-        <a href="{{ url('university-exams') }}" class="short-column-2">
+      <div class="col-lg-2 col-4 short-column-2 p-3 text-center">
+        <a  href="{{ url('university-exams') }}" class="short-column-2 anchor_text">
           <i class="fa fa-edit icon"></i>
           <br>University
           <br>Exams</a>
       </div>
-      <div class="col short-column-1 p-3 text-center">
-        <a href="{{ url('courses-offered') }}" class="short-column-1">
+      <div class="col-lg-2 col-4 short-column-1 p-3 text-center">
+        <a  href="{{ url('courses-offered') }}" class="short-column-1 anchor_text">
           <i class="fa fa-book custom icon"></i>
           <br>Courses
           <br>Offered</a>
       </div>
-      <div class="col short-column-2 p-3 text-center">
-        <a href="{{ url('recruitment') }}" class="short-column-2">
+      <div class="col-lg-2 col-4 short-column-2 p-3 text-center">
+        <a  href="{{ url('recruitment') }}" class="short-column-2 anchor_text">
           <i class="fa fa-plus icon"></i>
           <br>University
           <br>Recruitment</a>
       </div>
-      <div class="col short-column-1 p-3 text-center">
-        <a href="#" class="short-column-1">
+      <div class="col-lg-2 col-4 short-column-1 p-3 text-center">
+        <a  href="#" class="short-column-1 anchor_text">
           <i class="fa fa-laptop icon"></i>
           <br>Digital
           <br>Notes</a>
       </div>
-      <div class="col short-column-2 p-3 text-center">
-        <a href="{{ url('award-achievements') }}" class="short-column-2">
+      <div class="col-lg-2 col-4 short-column-2 p-3 text-center">
+        <a  href="{{ url('award-achievements') }}" class="short-column-2 anchor_text">
           <i class='fa fa-trophy icon'></i>
           <br>Awards &
           <br>Achievements</a>
@@ -415,6 +415,16 @@
             <img class="lazy-load-images" src="{{ asset('frontend/images/Adminstrative Building 16.jpg') }}" alt="Owl Image">
           </div>
         </div>
+        <!-- Carousel start -->
+        <!-- <div id="owl-demo" class="owl-carousel owl-theme pb-3">
+          <div class="item">
+            <img src="https://skvv.ac.in/frontend/images/vedic71.jpg" alt="Owl Image">
+            <div class="text-center">
+              <span class="faculty-name">P. Yogesh Ji Sharma</span>
+            </div>
+          </div>
+        </div> -->
+        <!-- carousel end -->
       </div>
     </div>
   </div>
@@ -423,29 +433,48 @@
 
 @section('js')
 <script>
-  alert("hellos");
-  $(document).ready(function() {
-    $(".owl-carousel").owlCarousel({
-      navigation : true
-      loop:true,
-    // margin:10,
-    responsiveClass:true,
-    responsive:{
-        0:{
-            items:1,
-            nav:true
-        },
-        600:{
-            items:3,
-            nav:true
-        },
-        1000:{
-            items:4,
-            nav:true,
-            loop:true
-        }
-    }
-    });
-});
+  // $('#reccomended').owlCarousel({
+  //       center: true,
+  //       items: 2,
+  //       loop: true,
+  //       margin: 0,
+  //       responsive: {
+  //           0: {
+  //               items: 1
+  //           },
+  //           600: {
+  //               items: 2
+  //           },
+  //           767: {
+  //               items: 2
+  //           },
+  //           1000: {
+  //               items: 3
+  //           },
+  //           1400: {
+  //               items: 4
+  //           }
+  //       }
+  // });
+  //   $('.owl-carousel').owlCarousel({
+  //       loop:true,
+  //       // margin:10,
+  //       responsiveClass:true,
+  //       responsive:{
+  //           0:{
+  //               items:1,
+  //               nav:true
+  //           },
+  //           600:{
+  //               items:3,
+  //               nav:true
+  //           },
+  //           1000:{
+  //               items:4,
+  //               nav:true,
+  //               loop:true
+  //           }
+  //       }
+  //   })
 </script>
 @endsection

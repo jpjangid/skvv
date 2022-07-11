@@ -25,7 +25,7 @@
             <div class="col-md-3">
                 <table class="table table-bordered">
                     <thead class="table-heading text-light font-weight-bold table-borderless">
-                        <td>Faculty</td>
+                        <td>STAFF</td>
                     </thead>
                     <tr>
                         <td class="active-td"><a href="{{ route('front.non_teaching.index') }}">Non-Teaching</a></td>
@@ -43,10 +43,10 @@
             </div>
             <div class="col-md-9">
                 <div class="contact-us-heading">
-                    Faculty list
+                    STAFF LIST
                 </div>
-                <div class="container form">
-                    <table id="example" class="display table-responsive" style="width:100%">
+                <div class="container">
+                    <table id="example" class="display table-responsive">
                         <thead>
                             <tr>
                                 <th>Name</th>

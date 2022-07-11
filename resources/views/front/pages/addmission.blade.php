@@ -55,6 +55,15 @@
                         <td class="administration-td"><a href="">{{$department->name}} <img src="{{asset('frontend/images/new.gif')}}"></a></td>
                     </tr>
                     @endforeach
+                    @else 
+                    <tr>
+                        <td class="administration-td text-center" style="border: 1px solid white;">
+                          <!-- <span>No Data Available</span> -->
+                          <div class="w-100" style="height:250px;">
+                            <img src="https://t3.ftcdn.net/jpg/03/34/96/94/360_F_334969463_uaLNHdMN87ODHYJzVurHtWMX0lAy2hnn.jpg" alt="" width="100%" height="100%">
+                          </div>
+                        </td>
+                    </tr>
                     @endif
                   
                 </table>

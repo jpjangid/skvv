@@ -21,7 +21,7 @@
          
         </table>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 h-100">
         <div class="contact-us-heading">UNIVERSITY EXAMS</div>
         <div class="container my-4">
             <div class="row">
@@ -34,7 +34,12 @@
                     @endforeach
                     @else 
                     <tr>
-                        <td class="administration-td text-center" style="border: 1px solid white;"><span>No Data Available</span></td>
+                        <td class="administration-td text-center p-0" style="border: 1px solid white;">
+                          <!-- <span>No Data Available</span> -->
+                          <div class="w-100" style="height:250px;">
+                            <img src="https://img.freepik.com/free-vector/coming-soon-background-with-megaphone-design_1017-27279.jpg?w=2000" alt="" width="100%" height="100%">
+                          </div>
+                        </td>
                     </tr>
                     @endif
                 </table>
