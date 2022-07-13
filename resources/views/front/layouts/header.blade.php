@@ -20,10 +20,19 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
           <div class="col-md topper align-items-center">
             <span class="contact_ref"><i class="fa fa-phone mr-2"></i>01477 294 394</span>
           </div>
+          <div class="col-md topper align-items-center px-0">
+            <div class="admission_btn pr-0">
+              <a href="{{ asset('frontend/images/Result 2022.pdf') }}" class="btn btn-primary admission-btn" target="_blank">
+                <span>Result</span>
+              </a>
+            </div>
+          </div>
           <div class="col-md topper align-items-center pr-0">
-            <a href="{{ url('apply')}}" class="btn btn-primary admission-btn">
-              <span>Admission <img src="https://webanix.in/new.gif" alt=""></span>
-            </a>
+            <div class="admission_btn pr-0">
+              <a href="{{ url('apply')}}" class="btn btn-primary admission-btn">
+                <span>Admission</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>

@@ -6017,9 +6017,13 @@ h5,
   .admission-btn {
     font-size: 11px;
   }
+  .topper {
+    font-size: 8px!important;
+    margin-bottom: 10px;
+  }
 }
 
-@media (max-width: 767.98px) {
+@media (min-width: 576px) and (max-width: 767.98px) {
   .topper {
     margin-bottom: 10px;
     font-size: 10px!important;
@@ -6126,6 +6130,9 @@ h5,
   .anchor_text {
     font-size: 13px;
   }
+  .admission_btn {
+    padding: 0 5px!important;
+  }
 }
 @media (max-width: 991.98px) {
   .ftco-navbar-light {
@@ -6135,7 +6142,9 @@ h5,
     padding: 10px 15px;
   }
 }
-
+.admission_btn {
+  padding: 0 35px;
+}
 .ftco-navbar-light .navbar-brand {
   color: #fff;
 }
