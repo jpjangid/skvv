@@ -101,8 +101,7 @@ class PageController extends Controller
 
     public function nonteaching()
     {
-        $users = User::where('role', 'staff')->orderBy('id')->get();
-        // dd($users);
+        $users = User::where('role', 'non-teaching staff')->orderBy('id')->orderby('id', 'desc')->get();
         return view('front.non_teaching.index', compact('users'));
     }
 

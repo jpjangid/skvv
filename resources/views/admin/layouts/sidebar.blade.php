@@ -116,6 +116,12 @@
               </a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="{{ route('users.index') }}">
+                <i class="ni ni-single-copy-04 text-primary"></i>
+                <span class="nav-link-text">Users</span>
+              </a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="{{ route('alumnispeak.index') }}">
                 <i class="ni ni-single-copy-04 text-primary"></i>
                 <span class="nav-link-text">Alumni Speak</span>

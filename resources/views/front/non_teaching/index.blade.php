@@ -25,7 +25,7 @@
             <div class="col-md-3">
                 <table class="table table-bordered">
                     <thead class="table-heading text-light font-weight-bold table-borderless">
-                        <td>STAFF</td>
+                        <td>Faculty</td>
                     </thead>
                     <tr>
                         <td class="active-td"><a href="{{ route('front.non_teaching.index') }}">Non-Teaching</a></td>
@@ -43,20 +43,23 @@
             </div>
             <div class="col-md-9">
                 <div class="contact-us-heading">
-                    STAFF LIST
+                    Faculty list
                 </div>
-                <div class="container">
-                    <table id="example" class="display table-responsive">
+                <div class="container form">
+                    <table id="example" class="display table-responsive-xl" style="width:100%">
                         <thead>
                             <tr>
+                                <td>So. No.</td>
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Designation</th>
                             </tr>
                         </thead>
                         <tbody>
+                            @php $i = 1;@endphp
                             @foreach($users as $user)
                             <tr>
+                                <td>{{ $i++}}</td>
                                 <td><a href="{{ url('/non-teaching/staff',$user->id) }}">{{ $user->name }}</td>
                                 <td>{{ $user->email }}</td>
                                 <td>{{ $user->designation }}</td>

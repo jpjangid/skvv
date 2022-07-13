@@ -161,6 +161,7 @@ Route::get('{department}/courses', [App\Http\Controllers\Front\CourseController:
 
 //Route for front department 
 Route::get('{department}', [App\Http\Controllers\Front\DepartmentController::class, 'index'])->name('front.department');
+Route::get('teacher/{name}', [App\Http\Controllers\Front\DepartmentController::class, 'teacher_details']);
 
 //Route for Non-Teaching Staff
 Route::get('non-teaching/staff', [App\Http\Controllers\Front\PageController::class, 'nonteaching'])->name('front.non_teaching.index');

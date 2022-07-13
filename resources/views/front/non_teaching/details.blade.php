@@ -59,7 +59,7 @@
                             <tr>
                                 <td>
                                     <p style="text-align:center"><strong>{{ $users->name }}</strong><br>
-                                        {{ $users->role }}&nbsp;
+                                        {{ $users->designation }}&nbsp;
                                     </p>
 
                                     <p style="text-align:center"><strong>{{ $users->email }}</strong></p>

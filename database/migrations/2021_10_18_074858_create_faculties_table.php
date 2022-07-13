@@ -20,6 +20,11 @@ class CreateFacultiesTable extends Migration
             $table->integer('course_id')->nullable();
             $table->integer('teacher_id')->nullable();
             $table->integer('teacher_role')->nullable();
+            $table->string('qualifications')->nullable();
+            $table->string('specializations')->nullable();
+            $table->string('office_address')->nullable();
+            $table->string('research_interests')->nullable();
+            $table->integer('published_books')->nullable();
             $table->integer('top_faculty')->default(0);
             $table->integer('status')->default(0);
             $table->integer('flag')->default(0);

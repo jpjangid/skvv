@@ -24,37 +24,37 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-2 col-4 short-column-1 p-3 text-center">
-        <a  href="{{url('admission')}}" class="short-column-1 anchor_text">
+        <a href="{{url('admission')}}" class="short-column-1 anchor_text">
           <i class="fa fa-university icon"></i>
           <br>Online
           <br>Admissions</a>
       </div>
       <div class="col-lg-2 col-4 short-column-2 p-3 text-center">
-        <a  href="{{ url('university-exams') }}" class="short-column-2 anchor_text">
+        <a href="{{ url('university-exams') }}" class="short-column-2 anchor_text">
           <i class="fa fa-edit icon"></i>
           <br>University
           <br>Exams</a>
       </div>
       <div class="col-lg-2 col-4 short-column-1 p-3 text-center">
-        <a  href="{{ url('courses-offered') }}" class="short-column-1 anchor_text">
+        <a href="{{ url('courses-offered') }}" class="short-column-1 anchor_text">
           <i class="fa fa-book custom icon"></i>
           <br>Courses
           <br>Offered</a>
       </div>
       <div class="col-lg-2 col-4 short-column-2 p-3 text-center">
-        <a  href="{{ url('recruitment') }}" class="short-column-2 anchor_text">
+        <a href="{{ url('recruitment') }}" class="short-column-2 anchor_text">
           <i class="fa fa-plus icon"></i>
           <br>University
           <br>Recruitment</a>
       </div>
       <div class="col-lg-2 col-4 short-column-1 p-3 text-center">
-        <a  href="#" class="short-column-1 anchor_text">
+        <a href="#" class="short-column-1 anchor_text">
           <i class="fa fa-laptop icon"></i>
           <br>Digital
           <br>Notes</a>
       </div>
       <div class="col-lg-2 col-4 short-column-2 p-3 text-center">
-        <a  href="{{ url('award-achievements') }}" class="short-column-2 anchor_text">
+        <a href="{{ url('award-achievements') }}" class="short-column-2 anchor_text">
           <i class='fa fa-trophy icon'></i>
           <br>Awards &
           <br>Achievements</a>
@@ -73,22 +73,26 @@
               <span class="chancellor">events</span>
             </h2>
             <div class="container1 blur">
-            @foreach($news as $new)
-            <a href="{{ url('news-events',$new->slug) }}">
-              <!-- <div class="text" style="text-transform: capitalize !important;"> -->
-              <!-- <marquee direction="left"  class="text" style="text-transform: capitalize !important;">{{ strtolower($new->heading) }}</marquee> -->
-              
-                  <ul class="slider">
-                    <li>{{ strtolower($new->heading) }}</li>
-                    <hr>
-                  </ul>
-              
-                <!-- <p class="current-date"></p> -->
-                <!-- <div class="dropdown-divider">
-                </div> -->
-              <!-- </div> -->
+              @foreach($news as $new)
+
+              @if(!empty($new->link_url))
+              <a href="{{ url($new->link_url) }}" target="_blank">
+
+                <ul class="slider">
+                  <li>{{ strtolower($new->heading) }}</li>
+                  <hr>
+                </ul>
               </a>
-            @endforeach
+              @else
+              <a href="{{ url('news-events',$new->slug) }}">
+
+                <ul class="slider">
+                  <li>{{ strtolower($new->heading) }}</li>
+                  <hr>
+                </ul>
+              </a>
+              @endif
+              @endforeach
             </div>
           </div>
         </div>

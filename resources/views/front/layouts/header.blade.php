@@ -14,16 +14,16 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
         <div class="d-flex align-items-center text-center">
           <div class="col-md topper align-items-center pl-0">
             <span class="contact_ref">
-            <i class="fa fa-envelope mr-2"></i>skvv.uni@gmail.com
+              <i class="fa fa-envelope mr-2"></i>skvv.uni@gmail.com
             </span>
           </div>
           <div class="col-md topper align-items-center">
-              <span class="contact_ref"><i class="fa fa-phone mr-2"></i>01477 294 394</span>
+            <span class="contact_ref"><i class="fa fa-phone mr-2"></i>01477 294 394</span>
           </div>
           <div class="col-md topper align-items-center pr-0">
-              <a href="{{ url('apply')}}" class="btn btn-primary admission-btn">
-                <span>Admission <img src="https://webanix.in/new.gif" alt=""></span>
-              </a>
+            <a href="{{ url('apply')}}" class="btn btn-primary admission-btn">
+              <span>Admission <img src="https://webanix.in/new.gif" alt=""></span>
+            </a>
           </div>
         </div>
       </div>
@@ -53,13 +53,13 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
           </li>
           <div class="menu-content">
             <div class="row m-0">
-                  <div class="column">
-                    <div class="menu-head">Administration</div>
-                    <a href="{{ url('recruitment') }}">Recruitment</a>
-                    <a href="{{ url('ugc') }}">UGC</a>
-                    <a href="{{ url('act') }}">Act</a>
-                    <a href="{{ url('non-teaching/staff') }}">Non-teaching Staff</a>
-                  </div>
+              <div class="column">
+                <div class="menu-head">Administration</div>
+                <a href="{{ url('recruitment') }}">Recruitment</a>
+                <a href="{{ url('ugc') }}">UGC</a>
+                <a href="{{ url('act') }}">Act</a>
+                <a href="{{ url('non-teaching/staff') }}">Non-teaching Staff</a>
+              </div>
             </div>
           </div>
         </div>
@@ -138,10 +138,10 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
                 <div class="column">
                   <div class="menu-head">ABC-XYZ</div>
                   <a href="{{url('about-us')}}">123</a>
-                </div>
-            </div>
-          </div> --}}
         </div>
+    </div>
+  </div> --}}
+  </div>
   <div class="mega-menu">
     <li class="menubtn">
       <a class="mega-a" href="contact-us">Contact Us
@@ -176,25 +176,25 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
       </div>
     </div>
   </div> -->
-      <div class="mega-menu">
-        <li class="menubtn"><a class="mega-a" href="">Research<i class="fa fa-caret-down ml-1"></i></a></li>
-        <div class="menu-content">
-          <div class="row m-0">
-            <div class="column">
-                <div class="menu-head">SKVV Media</div>
-                <!-- <a href="{{ url('news-events') }}">News & Events</a>
+  <div class="mega-menu">
+    <li class="menubtn"><a class="mega-a" href="">Research<i class="fa fa-caret-down ml-1"></i></a></li>
+    <div class="menu-content">
+      <div class="row m-0">
+        <div class="column">
+          <div class="menu-head">SKVV Media</div>
+          <!-- <a href="{{ url('news-events') }}">News & Events</a>
                 <a href="{{ route('front.photo.gallery') }}">Photo Gallery</a>
                 <a href="{{ route('front.video.gallery') }}">Video Gallery</a> -->
-                <a href="{{ asset('frontend/images/Paper-I_English.pdf') }}" target="_blank">English</a>
-                <a href="{{ asset('frontend/images/Hindi-20.pdf') }}" target="_blank">Hindi</a>
-                <a href="{{ asset('frontend/images/Paper-I_Hindi-00.pdf') }}" target="_blank">Hindi-1</a>
-                <a href="{{ asset('frontend/images/SANSKRIT-25.pdf') }}" target="_blank">SANSKRIT</a>
-                <a href="{{ asset('frontend/images/Sanskrit Traditional-73.pdf') }}" target="_blank">Sanskrit Traditional</a>
-                <a href="{{ asset('frontend/images/Yoga-100.pdf') }}" target="_blank">Yoga</a>
-            </div>
-          </div>
+          <a href="{{ asset('frontend/images/Paper-I_English.pdf') }}" target="_blank">English</a>
+          <a href="{{ asset('frontend/images/Hindi-20.pdf') }}" target="_blank">Hindi</a>
+          <a href="{{ asset('frontend/images/Paper-I_Hindi-00.pdf') }}" target="_blank">Hindi-1</a>
+          <a href="{{ asset('frontend/images/SANSKRIT-25.pdf') }}" target="_blank">SANSKRIT</a>
+          <a href="{{ asset('frontend/images/Sanskrit Traditional-73.pdf') }}" target="_blank">Sanskrit Traditional</a>
+          <a href="{{ asset('frontend/images/Yoga-100.pdf') }}" target="_blank">Yoga</a>
+        </div>
       </div>
-  </ul>
+    </div>
+    </ul>
   </div>
   <ul class="nav navbar-nav navbar-right text-right" id="search-form">
     <li>

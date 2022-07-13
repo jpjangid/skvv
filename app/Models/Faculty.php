@@ -16,24 +16,29 @@ class Faculty extends Model
         'teacher_id',
         'teacher_role',
         'top_faculty',
+        'qualifications',
+        'specializations',
+        'office_address',
+        'research_interests',
+        'published_books',
         'status',
         'flag'
     ];
 
     public function teacher()
     {
-        return $this->belongsTo('App\Models\User','teacher_id','id');
+        return $this->belongsTo('App\Models\User', 'teacher_id', 'id');
     }
     public function college()
     {
-        return $this->belongsTo('App\Models\College','college_id','id');
+        return $this->belongsTo('App\Models\College', 'college_id', 'id');
     }
     public function department()
     {
-        return $this->belongsTo('App\Models\Department','department_id','id');
+        return $this->belongsTo('App\Models\Department', 'department_id', 'id');
     }
     public function course()
     {
-        return $this->belongsTo('App\Models\Course','course_id','id');
+        return $this->belongsTo('App\Models\Course', 'course_id', 'id');
     }
 }
