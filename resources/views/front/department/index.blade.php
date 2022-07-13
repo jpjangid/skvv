@@ -96,7 +96,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 col-md-6 col-12 pb-2">
+              <!-- <div class="col-lg-6 col-md-6 col-12 pb-2">
                 <div class="img_content">
                   <div class="row m-0 py-3">
                     <div class="col-lg-5 col-12 d-flex align-items-center">
@@ -113,7 +113,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
               <!-- <div class="col-2"></div> -->
             </div>
           </div>

@@ -95,8 +95,10 @@
                                 <label for="teacher_role">Teacher role</label>
                                 <select name="teacher_role" id="teacher_role" class="form-control @error('teacher_role') is-invalid @enderror">
                                     <option value="" selected>Select Teacher role</option>
-                                    <option value="Professor">Professor</option>
                                     <option value="Dean">Dean</option>
+                                    <option value="Professor">Professor</option>
+                                    <option value="Assistant Professor">Assistant Professor</option>
+                                    <option value="Associate Professor">Associate Professor</option>
                                     <option value="Head teacher">Head teacher</option>
                                     <option value="Assistance teacher">Assistance teacher</option>
                                     <option value="Scholar teacher">Scholar teacher</option>

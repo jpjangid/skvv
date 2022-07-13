@@ -96,9 +96,10 @@
                                 <label for="teacher_role">Teacher role</label>
                                 <select name="teacher_role" id="teacher_role" class="form-control @error('teacher_role') is-invalid @enderror">
                                     <option value="" selected>Select Teacher role</option>
+                                    <option value="Dean" {{ ($faculty->teacher_role == 'Dean') ? "Selected" : "" }}>Dean</option>
                                     <option value="Professor" {{ ($faculty->teacher_role == 'Professor') ? "Selected" : "" }}>Professor</option>
                                     <option value="Assistance Professor" {{ ($faculty->teacher_role == 'Assistance Professor') ? "Selected" : "" }}>Assistance Professor</option>
-                                    <option value="Dean" {{ ($faculty->teacher_role == 'Dean') ? "Selected" : "" }}>Dean</option>
+                                    <option value="Associate Professor" {{ ($faculty->teacher_role == 'Associate Professor') ? "Selected" : "" }}>Assistance Professor</option>
                                     <option value="Head teacher" {{ ($faculty->teacher_role == 'Head teacher') ? "Selected" : "" }}>Head teacher</option>
                                     <option value="Assistance teacher" {{ ($faculty->teacher_role == 'Assistance teacher') ? "Selected" : "" }}>Assistance teacher</option>
                                     <option value="Scholar teacher" {{ ($faculty->teacher_role == 'Scholar teacher') ? "Selected" : "" }}>Scholar teacher</option>
