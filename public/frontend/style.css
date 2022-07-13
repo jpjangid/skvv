@@ -38,8 +38,8 @@
     text-align: center;
 }
 
-.slider:hover {
-    animation-play-state: paused;
+.container1:hover .slider {
+        animation-play-state: paused;
 }
 
 @keyframes slider {
