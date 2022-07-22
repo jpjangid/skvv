@@ -37,6 +37,8 @@
                                     <option value="event">Events</option>
                                     <option value="recruitment">Recruitment</option>
                                     <option value="award">Award Achievements</option>
+                                    <option value="ugc">UGC</option>
+                                    <option value="recognition">Recognition</option>
                                 </select>
                                 @error('category')
                                 <span class="text-danger">{{ $message }}</span>
