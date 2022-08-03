@@ -94,21 +94,6 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
             </div>
           </div>
         </div>
-        {{-- <div class="mega-menu">
-            <li class="menubtn">
-              <a class="mega-a" href="">Recruitment
-                <i class="fa fa-caret-down ml-1"></i>
-              </a>
-            </li>
-            <div class="menu-content">
-              <div class="row m-0">
-                <div class="column">
-                  <div class="menu-head">ABC-XYZ</div>
-                  <a href="#">123</a>
-                </div>
-              </div>
-            </div>
-          </div> --}}
         <div class="mega-menu">
           <li class="menubtn"><a class="mega-a" href="">Media<i class="fa fa-caret-down ml-1"></i></a></li>
           <div class="menu-content">
@@ -123,95 +108,44 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
             </div>
           </div>
         </div>
-        <!-- <div class="mega-menu"> -->
-        <!-- <li class="menubtn"><a class="mega-a" href="">Media</a></li> -->
-        <!--<li class="dropdown media-drop">-->
-        <!--  <a class="text-uppercase font-weight-bold media-drop-btn" data-toggle="dropdown" href="#" style="color: white; font-size: 13px;">Media-->
-        <!--    <i class="fa fa-caret-down ml-1"></i></a>-->
-        <!--  <ul class="dropdown-menu" style="border: none;border-radius: 0px; margin-top: -5px;">-->
-        <!--    <div class="menu-head" style="padding: 5px;">MEDIA</div>-->
-        <!--    <li class="media-dropdown"><a href="{{ url('news-events') }}">News & Events</a></li>-->
-        <!--    <li class="media-dropdown"><a href="{{ route('front.video.gallery') }}">Video Gallery</a></li>-->
-        <!--    <li class="media-dropdown"><a href="{{ route('front.photo.gallery') }}">Photo Gallery</a></li>-->
-        <!--  </ul>-->
-        <!--</li>-->
-        <!-- </div> -->
         <div class="mega-menu">
-          <!--<li class="menubtn">-->
-          <!--  <a class="mega-a" href="{{url('about-us')}}">About Us-->
-          <!--    {{-- <i class="fa fa-caret-down ml-1"></i> --}}-->
-          <!--  </a>-->
-          <!--</li>-->
-          {{-- <div class="menu-content">
-              <div class="row m-0">
-                <div class="column">
-                  <div class="menu-head">ABC-XYZ</div>
-                  <a href="{{url('about-us')}}">123</a>
         </div>
-    </div>
-  </div> --}}
-  </div>
-  <div class="mega-menu">
-    <li class="menubtn">
-      <a class="mega-a" href="contact-us">Contact Us
-        {{-- <i class="fa fa-caret-down ml-1"></i> --}}
-      </a>
-    </li>
-    {{-- <div class="menu-content">
-              <div class="row">
-                <div class="column">
-                  <div class="menu-head">ABC-XYZ</div>
-                  <a href="#">123</a>
-                </div>
+        <div class="mega-menu">
+          <li class="menubtn">
+            <a class="mega-a" href="contact-us">Contact Us
+            </a>
+          </li>
+        </div>
+        <div class="mega-menu">
+          <li class="menubtn">
+            <a class="mega-a" href="{{ url('recognition')}}">Recognition
+            </a>
+          </li>
+        </div>
+        <div class="mega-menu">
+          <li class="menubtn"><a class="mega-a" href="">Research<i class="fa fa-caret-down ml-1"></i></a></li>
+          <div class="menu-content">
+            <div class="row m-0">
+              <div class="column">
+                <div class="menu-head">SKVV Media</div>
+                <a href="{{ asset('frontend/images/Paper-I_English.pdf') }}" target="_blank">English</a>
+                <a href="{{ asset('frontend/images/Hindi-20.pdf') }}" target="_blank">Hindi</a>
+                <a href="{{ asset('frontend/images/Paper-I_Hindi-00.pdf') }}" target="_blank">Hindi-1</a>
+                <a href="{{ asset('frontend/images/SANSKRIT-25.pdf') }}" target="_blank">SANSKRIT</a>
+                <a href="{{ asset('frontend/images/Sanskrit Traditional-73.pdf') }}" target="_blank">Sanskrit Traditional</a>
+                <a href="{{ asset('frontend/images/Yoga-100.pdf') }}" target="_blank">Yoga</a>
               </div>
-            </div> --}}
-  </div>
-  <!-- <div class="mega-menu">
-    <li class="menubtn">
-      <a class="mega-a" href="{{ url('syllabus')}}">Syllabus</a>
-    </li>
-  </div> -->
-  <!-- <div class="mega-menu">
-    <li class="menubtn">
-      <a class="mega-a" href="">Research
-        <i class="fa fa-caret-down ml-1"></i>
-      </a>
-    </li>
-    <div class="menu-content">
-      <div class="row">
-        <div class="column col-md-11">
-          <a href="{{ url('syllabus')}}">Syllabus</a>
-        </div>
-      </div>
+            </div>
+          </div>
+      </ul>
     </div>
-  </div> -->
-  <div class="mega-menu">
-    <li class="menubtn"><a class="mega-a" href="">Research<i class="fa fa-caret-down ml-1"></i></a></li>
-    <div class="menu-content">
-      <div class="row m-0">
-        <div class="column">
-          <div class="menu-head">SKVV Media</div>
-          <!-- <a href="{{ url('news-events') }}">News & Events</a>
-                <a href="{{ route('front.photo.gallery') }}">Photo Gallery</a>
-                <a href="{{ route('front.video.gallery') }}">Video Gallery</a> -->
-          <a href="{{ asset('frontend/images/Paper-I_English.pdf') }}" target="_blank">English</a>
-          <a href="{{ asset('frontend/images/Hindi-20.pdf') }}" target="_blank">Hindi</a>
-          <a href="{{ asset('frontend/images/Paper-I_Hindi-00.pdf') }}" target="_blank">Hindi-1</a>
-          <a href="{{ asset('frontend/images/SANSKRIT-25.pdf') }}" target="_blank">SANSKRIT</a>
-          <a href="{{ asset('frontend/images/Sanskrit Traditional-73.pdf') }}" target="_blank">Sanskrit Traditional</a>
-          <a href="{{ asset('frontend/images/Yoga-100.pdf') }}" target="_blank">Yoga</a>
-        </div>
-      </div>
-    </div>
+    <ul class="nav navbar-nav navbar-right text-right" id="search-form">
+      <li>
+        <form action="/action_page.php" style="float: right !important;">
+          <input type="text" placeholder="Search.." name="search2" class="search-field">
+          <button type="submit" style="border: none; margin-left: -10px; border-radius: 5px; padding: 7px;"><i class="fa fa-search"></i></button>
+        </form>
+      </li>
     </ul>
-  </div>
-  <ul class="nav navbar-nav navbar-right text-right" id="search-form">
-    <li>
-      <form action="/action_page.php" style="float: right !important;">
-        <input type="text" placeholder="Search.." name="search2" class="search-field">
-        <button type="submit" style="border: none; margin-left: -10px; border-radius: 5px; padding: 7px;"><i class="fa fa-search"></i></button>
-      </form>
-    </li>
-  </ul>
   </div>
 </nav>

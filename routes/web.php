@@ -121,6 +121,7 @@ Route::get('award-&-achievements', [App\Http\Controllers\Front\NewsController::c
 Route::get('ugc', [App\Http\Controllers\Front\NewsController::class, 'ugc']);
 Route::get('act', [App\Http\Controllers\Front\NewsController::class, 'act']);
 Route::get('syllabus', [App\Http\Controllers\Front\HomeController::class, 'syllabus']);
+Route::get('recognition', [App\Http\Controllers\Front\NewsController::class, 'recognition']);
 
 // Create Permission
 Route::view('per', 'per');
