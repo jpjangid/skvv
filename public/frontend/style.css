@@ -1,4 +1,5 @@
 @media screen and (min-width: 768px) {
+
     /*body {*/
     /*    position: relative;*/
     /*    min-height: 100vh;*/
@@ -14,6 +15,7 @@
         display: flex;
         flex-direction: column;
     }
+
     footer {
         margin-top: auto;
     }
@@ -39,42 +41,68 @@
 }
 
 .container1:hover .slider {
-        animation-play-state: paused;
+    animation-play-state: paused;
 }
 
 @keyframes slider {
-    0%   { top:   10em }
-    100% { top: -14em }
+    0% {
+        top: 10em
+    }
+
+    100% {
+        top: -14em
+    }
 }
 
 .blur .slider {
-  	margin: 0;
+    margin: 0;
     padding: 0 1em;
     line-height: 1.5em;
+    text-align: left;
 }
 
-.blur:before, .blur::before,
-.blur:after,  .blur::after {
+.slider .updated-date {
+    font-size: 10px;
+    color: #000;
+}
+
+.in-news-section .view-all {
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
+    z-index: 999;
+}
+.in-news-section .view-all button{
+   padding: 5px 15px;
+   font-size: 12px;
+}
+
+.blur:before,
+.blur::before,
+.blur:after,
+.blur::after {
     left: 0;
     z-index: 1;
     content: '';
     position: absolute;
-    width: 100%; 
+    width: 100%;
     height: 2em;
-    background-image: linear-gradient(180deg, #FFF, rgba(255,255,255,0));
+    background-image: linear-gradient(180deg, #FFF, rgba(255, 255, 255, 0));
 }
 
-.blur:after, .blur::after {
+.blur:after,
+.blur::after {
     bottom: 0;
     transform: rotate(180deg);
 }
 
-.blur:before, .blur::before {
+.blur:before,
+.blur::before {
     top: 0;
 }
 
 p {
-  font-family: helvetica, arial, sans serif;
+    font-family: helvetica, arial, sans serif;
 }
 
 .carousel-inner img {
@@ -214,13 +242,15 @@ p {
 
 @media (max-width:768px) {
     .web-img {
-        width: 50%!important;
+        width: 50% !important;
     }
+
     .lazy-load-images {
         width: 30%;
         display: flex;
         margin: auto;
     }
+
     .foundertext .text {
         margin-top: 1rem;
         font-size: 14px;
@@ -257,12 +287,15 @@ p {
     .footer-section .text-uppercase {
         padding-left: 2rem !important;
     }
+
     .footer-section .contact {
         padding-left: 1.5rem !important;
     }
+
     .footer-section .text-uppercase {
         text-align: left !important;
     }
+
     .footer-section .connect {
         text-align: left !important;
         margin-left: 1.5rem !important;
@@ -337,6 +370,7 @@ p {
         height: 100px;
         object-fit: cover;
     }
+
     .ftco-gallery .no-gutters {
         margin-bottom: 0 !important;
     }
@@ -385,8 +419,9 @@ p {
 .dept-faculty {
     background-image: linear-gradient(to bottom, #F88158, #F2BB66);
 }
+
 .dept-faculty h2 {
-    padding:15px 0;
+    padding: 15px 0;
 }
 
 .dept-course {
