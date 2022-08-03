@@ -242,11 +242,11 @@
     <div class="col-md-6">
       <div class="row">
         <div class="col-md-5">
-          <img class="lazy-load-images" width="100%" src="{{ asset('frontend/images/laxmi sharma vice chancellor.jpg') }}">
+          <img class="lazy-load-images" width="100%" src="{{ asset('frontend/images/Tara Shankar Sharma.jpeg') }}">
         </div>
         <div class="col-md foundertext">
           <p class="text">Education is the passport to the future, for tomorrow belongs to those who prepare for it today.</p>
-          <p class="float-right font-weight-bold chancellor">- Prof. Laxmi Sharma</p>
+          <p class="float-right font-weight-bold chancellor">- Prof. Tara Shankar Sharma</p>
         </div>
       </div>
     </div>
