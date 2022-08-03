@@ -102,7 +102,7 @@ p {
     font-size: 13px !important;
     border: none;
     outline: none;
-    font-weight: bold !important;
+    font-weight: 600 !important;
     padding: 10px;
     font: inherit;
     margin: 0;
@@ -555,6 +555,9 @@ p {
     border: none;
     border-radius: 5px;
     padding: 7px;
+    background: blanchedalmond;
+    outline: none;
+    margin-left: 35px;
 }
 
 @media screen and (max-width: 376px) {
