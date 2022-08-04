@@ -38,8 +38,8 @@
                                     <option value="event" {{ $news->cat == "event" ? 'selected' : '' }}>Events</option>
                                     <option value="recruitment" {{ $news->cat == "recruitment" ? 'selected' : '' }}>Recruitment</option>
                                     <option value="award" {{ $news->cat == "award" ? 'selected' : '' }}>Award Achievements</option>
-                                    <option value="ugc" { $news->cat == "ugc" ? 'selected' : '' }}>UGC</option>
-                                    <option value="recognition" { $news->cat == "recognition" ? 'selected' : '' }}>Recognition</option>
+                                    <option value="ugc" {{ $news->cat == "ugc" ? 'selected' : '' }}>UGC</option>
+                                    <option value="recognition" {{ $news->cat == "recognition" ? 'selected' : '' }}>Recognition</option>
                                 </select>
                                 @error('category')
                                 <span class="text-danger">{{ $message }}</span>

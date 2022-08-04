@@ -128,7 +128,7 @@
                         <div class="col-md-3">
                             <div style="background-color: white;">
                                 <div class="photo p-2">
-                                    <a href="#"><img src="{{ asset('storage/news/image/'.$new->img_url) }}" style="width: 100%; height: 360px; object-fit: contain;" id="myImg"></a>
+                                    <a href="#"><img src="{{ asset('storage/news/image/'.$new->img_url) }}" onClick="openModel('{{$new->img_url}}')" style="width: 100%; height: 360px; object-fit: contain;" id="myImg"></a>
                                 </div>
                                 <div class="photo-heading text-center">{{ $new->heading}}</div>
                             </div>
@@ -156,13 +156,16 @@
     var modal = document.getElementById("myModal");
 
     // Get the image and insert it inside the modal - use its "alt" text as a caption
-    var img = document.getElementById("myImg");
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-    img.onclick = function() {
+    function openModel(url) {
+        var img = 'storage/news/image/'+url;
+        // console.log(img,this.src)
+        // console.log(img,url)
+        var modalImg = document.getElementById("img01");
+        // var captionText = document.getElementById("caption");
         modal.style.display = "block";
-        modalImg.src = this.src;
-        captionText.innerHTML = this.alt;
+        modalImg.src = img;
+        // alert(modalImg.src)
+        // captionText.innerHTML = this.alt;
     }
 
     // Get the <span> element that closes the modal
