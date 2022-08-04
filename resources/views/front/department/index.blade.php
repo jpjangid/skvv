@@ -90,7 +90,7 @@
                       <div class="content">
                         <p class="text-justify">Education is the passport to the future, for tomorrow belongs to those who prepare for it today.</p>
                         <p class="text-right text-warning name_content">VICE CHANCELLOR</p>
-                        <p class="text-right text-warning m-0 name_content">- Prof. Tara Shankar Sharma</p>
+                        <p class="text-right text-warning m-0 name_content">- Prof. Tarashankar Sharma</p>
                       </div>
                     </div>
                   </div>

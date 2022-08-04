@@ -157,7 +157,7 @@
     </div>
   </div>
 </section>
-<section class="ftco-section ftco-counter img py-3" id="section-counter" style="background-image: url({{asset('frontend/images/college.png')}}); background-position: 50% 50%;" data-stellar-background-ratio="0.5">
+<section class="ftco-section ftco-counter img py-3" id="section-counter" style="background-image: url({{ asset('frontend/images/college.png') }}); background-position: 50% 50%;" data-stellar-background-ratio="0.5">
   <div class="container">
     <div class="row justify-content-center mb-2 pb-2 d-flex">
       <div class="col-md-6 align-items-stretch d-flex pt-4">
@@ -242,11 +242,11 @@
     <div class="col-md-6">
       <div class="row">
         <div class="col-md-5">
-          <img class="lazy-load-images" width="100%" src="{{ asset('frontend/images/Tara Shankar Sharma.jpeg') }}">
+          <img class="lazy-load-images" width="100%" src="{{ asset('frontend/images/Untitled design.jpg') }}">
         </div>
         <div class="col-md foundertext">
           <p class="text">Education is the passport to the future, for tomorrow belongs to those who prepare for it today.</p>
-          <p class="float-right font-weight-bold chancellor">- Prof. Tara Shankar Sharma</p>
+          <p class="float-right font-weight-bold chancellor">- Prof. Tarashankar Sharma</p>
         </div>
       </div>
     </div>
