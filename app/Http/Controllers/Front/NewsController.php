@@ -30,18 +30,24 @@ class NewsController extends Controller
 
    public function award()
    {
-      $news = NewsEvents::where(['cat' => 'award'])->orderBy('created_at', 'asc')->take(10)->get();
+      $news = NewsEvents::where(['cat' => 'award'])->orderBy('created_at', 'desc')->take(10)->get();
       return view('front.pages.award', compact('news'));
    }
 
    public function awardAchievements()
    {
-      $news = NewsEvents::where(['cat' => 'award'])->orderBy('created_at', 'asc')->get();
+      $news = NewsEvents::where(['cat' => 'award'])->orderBy('created_at', 'desc')->get();
       return view('front.pages.award_detail', compact('news'));
    }
    public function ugc()
    {
-      $news = NewsEvents::where(['cat' => 'ugc', 'flag' => 0])->get();
+      $news = NewsEvents::where(['cat' => 'ugc', 'flag' => 0])->orderBy('created_at', 'desc')->get();
       return view('front.pages.ugc', compact('news'));
+   }
+
+   public function recognition()
+   {
+      $recognitions = NewsEvents::where(['cat' => 'recognition', 'flag' => 0])->orderBy('created_at', 'desc')->get();
+      return view('front.pages.recognition', compact('recognitions'));
    }
 }

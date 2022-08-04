@@ -83,14 +83,14 @@
                   <div class="row m-0 py-3">
                     <div class="col-lg-5 col-12 d-flex align-items-center">
                       <div class="profile_dashboard">
-                        <img src="https://img.freepik.com/premium-photo/young-handsome-man-with-beard-isolated-keeping-arms-crossed-frontal-position_1368-132662.jpg?w=2000" alt="">
+                        <img src="{{ asset('frontend/images/Tara Shankar Sharma.jpeg') }}" alt="">
                       </div>
                     </div>
                     <div class="col-lg-7 col-12 d-flex align-items-center">
                       <div class="content">
                         <p class="text-justify">Education is the passport to the future, for tomorrow belongs to those who prepare for it today.</p>
-                        <p class="text-right text-warning name_content">FOUNDER AND VICE CHANCELLOR</p>
-                        <p class="text-right text-warning m-0 name_content">- Prof. Laxmi Sharma</p>
+                        <p class="text-right text-warning name_content">VICE CHANCELLOR</p>
+                        <p class="text-right text-warning m-0 name_content">- Prof. Tara Shankar Sharma</p>
                       </div>
                     </div>
                   </div>

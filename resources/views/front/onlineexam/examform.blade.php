@@ -433,7 +433,7 @@
                                         <div class="address"><strong>Shri Kallaji Vedic Vishvavidyalaya</strong></div>
                                     </div>
                                     <div class="col md-4">
-                                        <img src="{{ asset('rv/WhatsApp Image 2022-05-21 at 3.16.08 PM.jpeg')}}" alt="" width="250px" ; height="250px;">
+                                        <img src="{{ asset('rv/qrcode.jpg')}}" alt="" width="250px" ; height="250px;">
                                     </div>
                                 </div>
                             </div>

@@ -211,30 +211,7 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
             </div>
           </div>
         </div>
-        <!-- <div class="mega-menu"> -->
-        <!-- <li class="menubtn"><a class="mega-a" href="">Media</a></li> -->
-        <!--<li class="dropdown media-drop">-->
-        <!--  <a class="text-uppercase font-weight-bold media-drop-btn" data-toggle="dropdown" href="#" style="color: white; font-size: 13px;">Media-->
-        <!--    <i class="fa fa-caret-down ml-1"></i></a>-->
-        <!--  <ul class="dropdown-menu" style="border: none;border-radius: 0px; margin-top: -5px;">-->
-        <!--    <div class="menu-head" style="padding: 5px;">MEDIA</div>-->
-        <!--    <li class="media-dropdown"><a href="{{ url('news-events') }}">News & Events</a></li>-->
-        <!--    <li class="media-dropdown"><a href="{{ route('front.video.gallery') }}">Video Gallery</a></li>-->
-        <!--    <li class="media-dropdown"><a href="{{ route('front.photo.gallery') }}">Photo Gallery</a></li>-->
-        <!--  </ul>-->
-        <!--</li>-->
-        <!-- </div> -->
         <div class="mega-menu">
-          <!--<li class="menubtn">-->
-          <!--  <a class="mega-a" href="{{url('about-us')}}">About Us-->
-          <!--    {{-- <i class="fa fa-caret-down ml-1"></i> --}}-->
-          <!--  </a>-->
-          <!--</li>-->
-          {{-- <div class="menu-content">
-              <div class="row m-0">
-                <div class="column">
-                  <div class="menu-head">ABC-XYZ</div>
-                  <a href="{{url('about-us')}}">123</a>
         </div>
     </div>
   </div> --}}
