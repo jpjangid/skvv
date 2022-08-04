@@ -81,7 +81,7 @@
                 <ul class="slider">
                   <li>{{ strtolower($new->heading) }}</li>
                   <div class="date">
-                    <span>Updated on: 03/08/2022</span>
+                    <span class="updated-date">Updated on: 03/08/2022</span>
                   </div>
                   <hr>
                 </ul>

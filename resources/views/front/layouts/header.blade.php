@@ -67,7 +67,7 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
           <div class="menu-content">
             <div class="row m-0">
               <div class="column">
-                <a href="{{ url('recruitment') }}">Home/History and Origin</a>
+                <a href="{{ url('coming-soon') }}">Home/History and Origin</a>
               </div>
             </div>
           </div>
@@ -81,13 +81,13 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
           <div class="menu-content">
             <div class="row m-0">
               <div class="column">
-                <a href="{{ url('recruitment') }}">Our Moto</a>
-                <a href="{{ url('recruitment') }}">About the Logo</a>
-                <a href="{{ url('act') }}">Gazette Notification(Act)</a>
+                <a href="{{ url('coming-soon') }}">Our Moto</a>
+                <a href="{{ url('coming-soon') }}">About the Logo</a>
+                <a href="{{ url('ugc') }}">Gazette Notification(Act)</a>
                 <a href="{{ url('act') }}">Campus</a>
-                <a href="{{ url('ugc') }}">Affiliation</a>
-                <a href="{{ url('non-teaching/staff') }}">Annual Report</a>
-                <a href="{{ url('non-teaching/staff') }}">Recognition</a>
+                <a href="{{ url('coming-soon') }}">Affiliation</a>
+                <a href="{{ url('coming-soon') }}">Annual Report</a>
+                <a href="{{ url('coming-soon') }}">Recognition</a>
               </div>
             </div>
           </div>
@@ -101,14 +101,14 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
           <div class="menu-content">
             <div class="row m-0">
               <div class="column">
-                <a href="{{ url('recruitment') }}">Board of Management</a>
-                <a href="{{ url('recruitment') }}">Academic Council</a>
-                <a href="{{ url('ugc') }}">Finance Committee</a>
-                <a href="{{ url('act') }}">Research Board</a>
-                <a href="{{ url('non-teaching/staff') }}">Library Committee</a>
-                <a href="{{ url('non-teaching/staff') }}">Sports Committee</a>
-                <a href="{{ url('non-teaching/staff') }}">Admission Committee (UG/PG)</a>
-                <a href="{{ url('non-teaching/staff') }}">Board of Studies</a>
+                <a href="{{ url('coming-soon') }}">Board of Management</a>
+                <a href="{{ url('coming-soon') }}">Academic Council</a>
+                <a href="{{ url('coming-soon') }}">Finance Committee</a>
+                <a href="{{ url('coming-soon') }}">Research Board</a>
+                <a href="{{ url('coming-soon') }}">Library Committee</a>
+                <a href="{{ url('coming-soon') }}">Sports Committee</a>
+                <a href="{{ url('coming-soon') }}">Admission Committee (UG/PG)</a>
+                <a href="{{ url('coming-soon') }}">Board of Studies</a>
               </div>
             </div>
           </div>
@@ -123,14 +123,14 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
             <div class="row m-0">
               <div class="column">
                 <!-- <div class="menu-head">Chairman (Shri Kailash Chandra Mundra)</div> -->
-                <a href="{{ url('recruitment') }}">Chairman</a>
-                <a href="{{ url('ugc') }}">President</a>
-                <a href="{{ url('ugc') }}">Resistrar</a>
-                <a href="{{ url('act') }}">Finance Officer</a>
-                <a href="{{ url('act') }}">Controller of Examination</a>
-                <a href="{{ url('act') }}">Chief Librarian</a>
-                <a href="{{ url('act') }}">Director</a>
-                <a href="{{ url('non-teaching/staff') }}">Assistant Resigtrar</a>
+                <a href="{{ url('coming-soon') }}">Chairman</a>
+                <a href="{{ url('coming-soon') }}">President</a>
+                <a href="{{ url('coming-soon') }}">Resistrar</a>
+                <a href="{{ url('coming-soon') }}">Finance Officer</a>
+                <a href="{{ url('coming-soon') }}">Controller of Examination</a>
+                <a href="{{ url('coming-soon') }}">Chief Librarian</a>
+                <a href="{{ url('coming-soon') }}">Director</a>
+                <a href="{{ url('coming-soon') }}">Assistant Resigtrar</a>
                 <a href="{{ url('non-teaching/staff') }}">Non Teaching Staff</a>
               </div>
             </div>
@@ -198,15 +198,15 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
             <div class="row m-0">
               <div class="column">
                 <!-- <div class="menu-head">SKVV Media</div> -->
-                <a href="{{ url('news-events') }}">Courses Offer</a>
-                <a href="{{ route('front.photo.gallery') }}">Syllabus & Prospectus</a>
-                <a href="{{ route('front.video.gallery') }}">Academic Calendar</a>
-                <a href="{{ route('front.video.gallery') }}">Student Admission</a>
-                <a href="{{ route('front.video.gallery') }}">Examinations</a>
-                <a href="{{ route('front.video.gallery') }}">Results</a>
-                <a href="{{ route('front.video.gallery') }}">Student's Notice Board</a>
-                <a href="{{ route('front.video.gallery') }}">Services(TC/CC/MC/ID/Library Card/Insurance etc.)</a>
-                <a href="{{ route('front.video.gallery') }}">Hostel</a>
+                <a href="{{ url('coming-soon') }}">Courses Offer</a>
+                <a href="{{ url('coming-soon') }}">Syllabus & Prospectus</a>
+                <a href="{{ url('coming-soon') }}">Academic Calendar</a>
+                <a href="{{ url('coming-soon') }}">Student Admission</a>
+                <a href="{{ url('coming-soon') }}">Examinations</a>
+                <a href="{{ url('coming-soon') }}">Results</a>
+                <a href="{{ url('coming-soon') }}">Student's Notice Board</a>
+                <a href="{{ url('coming-soon') }}">Services(TC/CC/MC/ID/Library Card/Insurance etc.)</a>
+                <a href="{{ url('coming-soon') }}">Hostel</a>
               </div>
             </div>
           </div>
@@ -292,10 +292,13 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
           <a href="{{ url('news-events') }}">News & Events</a>
           {{-- <a href="upcoming_news.html">Upcoming Events</a> --}}
           <a href="{{ route('front.photo.gallery') }}">Photo Gallery</a>
-          <a href="{{ route('front.video.gallery') }}">Video Gallery</a>
+          <a href="{{ url('coming-soon') }}">Video Gallery</a>
         </div>
       </div>
     </div>
+  </div>
+  </div>
+  </div>
   </div>
   <div class="mega-menu">
     <li class="menubtn">
