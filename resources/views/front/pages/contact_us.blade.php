@@ -33,12 +33,12 @@
           </thead>
           <tr>
             <td class="active-td">
-              <a href="contact_us.html">Contact Us</a>
+              <a href="{{ url('contact-us')}}">Contact Us</a>
             </td>
           </tr>
           <tr>
             <td>
-              <a href="locate_us.html">Locate Us</a>
+              <a href="{{ url('locate-us')}}">Locate Us</a>
             </td>
           </tr>
         </table>
