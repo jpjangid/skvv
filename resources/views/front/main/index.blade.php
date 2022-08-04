@@ -80,6 +80,9 @@
 
                 <ul class="slider">
                   <li>{{ strtolower($new->heading) }}</li>
+                  <div class="date">
+                    <span>Updated on: 03/08/2022</span>
+                  </div>
                   <hr>
                 </ul>
               </a>
@@ -88,11 +91,19 @@
 
                 <ul class="slider">
                   <li>{{ strtolower($new->heading) }}</li>
+                  <div class="date">
+                    <span class="updated-date">Updated on: 03/08/2022</span>
+                  </div>
                   <hr>
                 </ul>
               </a>
               @endif
               @endforeach
+            </div>
+            <div class="view-all">
+              <button class="view-btn" type="button">View all
+                <i class="fa fa-angle-double-right"></i>
+              </button>
             </div>
           </div>
         </div>
