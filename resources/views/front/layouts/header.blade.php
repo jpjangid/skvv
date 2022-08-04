@@ -61,7 +61,7 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
         <div class="mega-menu">
           <li class="menubtn">
             <a class="mega-a" href="{{ url('/') }}">Home
-            <i class="fa fa-caret-down ml-1"></i>
+              <i class="fa fa-caret-down ml-1"></i>
             </a>
           </li>
           <div class="menu-content">
@@ -83,9 +83,9 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
               <div class="column">
                 <a href="{{ url('recruitment') }}">Our Moto</a>
                 <a href="{{ url('recruitment') }}">About the Logo</a>
-                <a href="{{ url('ugc') }}">Gazette Notification(Act)</a>
+                <a href="{{ url('act') }}">Gazette Notification(Act)</a>
                 <a href="{{ url('act') }}">Campus</a>
-                <a href="{{ url('non-teaching/staff') }}">Affiliation</a>
+                <a href="{{ url('ugc') }}">Affiliation</a>
                 <a href="{{ url('non-teaching/staff') }}">Annual Report</a>
                 <a href="{{ url('non-teaching/staff') }}">Recognition</a>
               </div>
@@ -284,19 +284,19 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
     </div>
   </div>
   <div class="mega-menu">
-          <li class="menubtn"><a class="mega-a" href="">Media<i class="fa fa-caret-down ml-1"></i></a></li>
-          <div class="menu-content">
-            <div class="row m-0">
-              <div class="column">
-                <!-- <div class="menu-head">SKVV Media</div> -->
-                <a href="{{ url('news-events') }}">News & Events</a>
-                {{-- <a href="upcoming_news.html">Upcoming Events</a> --}}
-                <a href="{{ route('front.photo.gallery') }}">Photo Gallery</a>
-                <a href="{{ route('front.video.gallery') }}">Video Gallery</a>
-              </div>
-            </div>
-          </div>
+    <li class="menubtn"><a class="mega-a" href="">Media<i class="fa fa-caret-down ml-1"></i></a></li>
+    <div class="menu-content">
+      <div class="row m-0">
+        <div class="column">
+          <!-- <div class="menu-head">SKVV Media</div> -->
+          <a href="{{ url('news-events') }}">News & Events</a>
+          {{-- <a href="upcoming_news.html">Upcoming Events</a> --}}
+          <a href="{{ route('front.photo.gallery') }}">Photo Gallery</a>
+          <a href="{{ route('front.video.gallery') }}">Video Gallery</a>
         </div>
+      </div>
+    </div>
+  </div>
   <div class="mega-menu">
     <li class="menubtn">
       <a class="mega-a" href="contact-us">Contact Us

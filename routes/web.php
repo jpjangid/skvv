@@ -124,7 +124,6 @@ Route::get('syllabus', [App\Http\Controllers\Front\HomeController::class, 'sylla
 Route::get('recognition', [App\Http\Controllers\Front\NewsController::class, 'recognition']);
 
 // Create Permission
-Route::view('per', 'per');
 Route::post('test', [App\Http\Controllers\PermissionController::class, 'permission'])->name('per.create');
 
 //Route for addmission
