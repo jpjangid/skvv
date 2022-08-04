@@ -83,9 +83,9 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
               <div class="column">
                 <a href="{{ url('coming-soon') }}">Our Moto</a>
                 <a href="{{ url('coming-soon') }}">About the Logo</a>
-                <a href="{{ url('ugc') }}">Gazette Notification(Act)</a>
-                <a href="{{ url('act') }}">Campus</a>
-                <a href="{{ url('coming-soon') }}">Affiliation</a>
+                <a href="{{ url('act') }}">Gazette Notification(Act)</a>
+                <a href="{{ url('coming-soon') }}">Campus</a>
+                <a href="{{ url('ugc') }}">Affiliation</a>
                 <a href="{{ url('coming-soon') }}">Annual Report</a>
                 <a href="{{ url('coming-soon') }}">Recognition</a>
               </div>
@@ -122,7 +122,6 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
           <div class="menu-content">
             <div class="row m-0">
               <div class="column">
-                <!-- <div class="menu-head">Chairman (Shri Kailash Chandra Mundra)</div> -->
                 <a href="{{ url('coming-soon') }}">Chairman</a>
                 <a href="{{ url('coming-soon') }}">President</a>
                 <a href="{{ url('coming-soon') }}">Resistrar</a>
@@ -158,46 +157,11 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
             </div>
           </div>
         </div>
-        {{-- <div class="mega-menu">
-            <li class="menubtn">
-              <a class="mega-a" href="">Recruitment
-                <i class="fa fa-caret-down ml-1"></i>
-              </a>
-            </li>
-            <div class="menu-content">
-              <div class="row m-0">
-                <div class="column">
-                  <div class="menu-head">ABC-XYZ</div>
-                  <a href="#">123</a>
-                </div>
-              </div>
-            </div>
-          </div> --}}
-        <!-- <div class="mega-menu">
-          <li class="menubtn"><a class="mega-a" href="">Center/Cells<i class="fa fa-caret-down ml-1"></i></a></li>
-          <div class="menu-content">
-            <div class="row m-0">
-              <div class="column">
-                <div class="menu-head">SKVV Media</div>
-                <a href="{{ url('news-events') }}">Mahrashi Yashka Central Library</a>
-                {{-- <a href="upcoming_news.html">Upcoming Events</a> --}}
-                <a href="{{ route('front.photo.gallery') }}">Mahrashi Yashka Central Library</a>
-                <a href="{{ route('front.video.gallery') }}">Rjabhasha Cell</a>
-                <a href="{{ route('front.video.gallery') }}">Vigilance Cell</a>
-                <a href="{{ route('front.video.gallery') }}">SC, ST & Specifically Abled Redressal Cell</a>
-                <a href="{{ route('front.video.gallery') }}">Women Harashment Redressal Cell</a>
-                <a href="{{ route('front.video.gallery') }}">Anti Ragging Cell</a>
-                <a href="{{ route('front.video.gallery') }}">Primary Helth Centre</a>
-              </div>
-            </div>
-          </div>
-        </div> -->
         <div class="mega-menu">
           <li class="menubtn"><a class="mega-a" href="">Students Corner<i class="fa fa-caret-down ml-1"></i></a></li>
           <div class="menu-content">
             <div class="row m-0">
               <div class="column">
-                <!-- <div class="menu-head">SKVV Media</div> -->
                 <a href="{{ url('coming-soon') }}">Courses Offer</a>
                 <a href="{{ url('coming-soon') }}">Syllabus & Prospectus</a>
                 <a href="{{ url('coming-soon') }}">Academic Calendar</a>
@@ -211,119 +175,48 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
             </div>
           </div>
         </div>
-        <!-- <div class="mega-menu"> -->
-        <!-- <li class="menubtn"><a class="mega-a" href="">Media</a></li> -->
-        <!--<li class="dropdown media-drop">-->
-        <!--  <a class="text-uppercase font-weight-bold media-drop-btn" data-toggle="dropdown" href="#" style="color: white; font-size: 13px;">Media-->
-        <!--    <i class="fa fa-caret-down ml-1"></i></a>-->
-        <!--  <ul class="dropdown-menu" style="border: none;border-radius: 0px; margin-top: -5px;">-->
-        <!--    <div class="menu-head" style="padding: 5px;">MEDIA</div>-->
-        <!--    <li class="media-dropdown"><a href="{{ url('news-events') }}">News & Events</a></li>-->
-        <!--    <li class="media-dropdown"><a href="{{ route('front.video.gallery') }}">Video Gallery</a></li>-->
-        <!--    <li class="media-dropdown"><a href="{{ route('front.photo.gallery') }}">Photo Gallery</a></li>-->
-        <!--  </ul>-->
-        <!--</li>-->
-        <!-- </div> -->
         <div class="mega-menu">
-          <!--<li class="menubtn">-->
-          <!--  <a class="mega-a" href="{{url('about-us')}}">About Us-->
-          <!--    {{-- <i class="fa fa-caret-down ml-1"></i> --}}-->
-          <!--  </a>-->
-          <!--</li>-->
-          {{-- <div class="menu-content">
-              <div class="row m-0">
-                <div class="column">
-                  <div class="menu-head">ABC-XYZ</div>
-                  <a href="{{url('about-us')}}">123</a>
         </div>
-    </div>
-  </div> --}}
-  </div>
-
-  <!-- <div class="mega-menu">
-    <li class="menubtn">
-      <a class="mega-a" href="{{ url('syllabus')}}">Syllabus</a>
-    </li>
-  </div> -->
-  <!-- <div class="mega-menu">
-    <li class="menubtn">
-      <a class="mega-a" href="">Research
-        <i class="fa fa-caret-down ml-1"></i>
-      </a>
-    </li>
-    <div class="menu-content">
-      <div class="row">
-        <div class="column col-md-11">
-          <a href="{{ url('syllabus')}}">Syllabus</a>
+        <div class="mega-menu">
+          <li class="menubtn"><a class="mega-a" href="">Research<i class="fa fa-caret-down ml-1"></i></a></li>
+          <div class="menu-content">
+            <div class="row m-0">
+              <div class="column">
+                <a href="{{ asset('frontend/images/Paper-I_English.pdf') }}" target="_blank">Maharshi Bharadvaja Anusandhana Kendra</a>
+                <a href="{{ asset('frontend/images/Hindi-20.pdf') }}" target="_blank">Vidhyavaridhi(Ph.D.) & Vidyavacaspati(D.Lit.)</a>
+                <a href="{{ asset('frontend/images/Paper-I_Hindi-00.pdf') }}" target="_blank">Publication Committee</a>
+                <a href="{{ asset('frontend/images/SANSKRIT-25.pdf') }}" target="_blank">List of Pulications</a>
+                <a href="{{ asset('frontend/images/Sanskrit Traditional-73.pdf') }}" target="_blank">Ongoing Projects</a>
+                <a href="{{ asset('frontend/images/Yoga-100.pdf') }}" target="_blank">Completed Projects</a>
+                <a href="{{ asset('frontend/images/Yoga-100.pdf') }}" target="_blank">University Journal</a>
+                <a href="{{ asset('frontend/images/Yoga-100.pdf') }}" target="_blank">Referesher Courses</a>
+                <a href="{{ asset('frontend/images/Yoga-100.pdf') }}" target="_blank">Seminars</a>
+                <a href="{{ asset('frontend/images/Yoga-100.pdf') }}" target="_blank">Workshops</a>
+                <a href="{{ asset('frontend/images/Yoga-100.pdf') }}" target="_blank">Public Letcures</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div> -->
-  <div class="mega-menu">
-    <li class="menubtn"><a class="mega-a" href="">Research<i class="fa fa-caret-down ml-1"></i></a></li>
-    <div class="menu-content">
-      <div class="row m-0">
-        <div class="column">
-          <!-- <div class="menu-head">SKVV Media</div> -->
-          <!-- <a href="{{ url('news-events') }}">News & Events</a>
+        <div class="mega-menu">
+          <li class="menubtn"><a class="mega-a" href="">Media<i class="fa fa-caret-down ml-1"></i></a></li>
+          <div class="menu-content">
+            <div class="row m-0">
+              <div class="column">
+                <!-- <div class="menu-head">SKVV Media</div> -->
+                <a href="{{ url('news-events') }}">News & Events</a>
                 <a href="{{ route('front.photo.gallery') }}">Photo Gallery</a>
-                <a href="{{ route('front.video.gallery') }}">Video Gallery</a> -->
-          <a href="{{ asset('frontend/images/Paper-I_English.pdf') }}" target="_blank">Maharshi Bharadvaja Anusandhana Kendra</a>
-          <a href="{{ asset('frontend/images/Hindi-20.pdf') }}" target="_blank">Vidhyavaridhi(Ph.D.) & Vidyavacaspati(D.Lit.)</a>
-          <a href="{{ asset('frontend/images/Paper-I_Hindi-00.pdf') }}" target="_blank">Publication Committee</a>
-          <a href="{{ asset('frontend/images/SANSKRIT-25.pdf') }}" target="_blank">List of Pulications</a>
-          <a href="{{ asset('frontend/images/Sanskrit Traditional-73.pdf') }}" target="_blank">Ongoing Projects</a>
-          <a href="{{ asset('frontend/images/Yoga-100.pdf') }}" target="_blank">Completed Projects</a>
-          <a href="{{ asset('frontend/images/Yoga-100.pdf') }}" target="_blank">University Journal</a>
-          <a href="{{ asset('frontend/images/Yoga-100.pdf') }}" target="_blank">Referesher Courses</a>
-          <a href="{{ asset('frontend/images/Yoga-100.pdf') }}" target="_blank">Seminars</a>
-          <a href="{{ asset('frontend/images/Yoga-100.pdf') }}" target="_blank">Workshops</a>
-          <a href="{{ asset('frontend/images/Yoga-100.pdf') }}" target="_blank">Public Letcures</a>
+                <a href="{{ url('coming-soon') }}">Video Gallery</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="mega-menu">
-    <li class="menubtn"><a class="mega-a" href="">Media<i class="fa fa-caret-down ml-1"></i></a></li>
-    <div class="menu-content">
-      <div class="row m-0">
-        <div class="column">
-          <!-- <div class="menu-head">SKVV Media</div> -->
-          <a href="{{ url('news-events') }}">News & Events</a>
-          {{-- <a href="upcoming_news.html">Upcoming Events</a> --}}
-          <a href="{{ route('front.photo.gallery') }}">Photo Gallery</a>
-          <a href="{{ url('coming-soon') }}">Video Gallery</a>
+        <div class="mega-menu">
+          <li class="menubtn">
+            <a class="mega-a" href="contact-us">Contact Us
+            </a>
+          </li>
         </div>
-      </div>
+      </ul>
     </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  <div class="mega-menu">
-    <li class="menubtn">
-      <a class="mega-a" href="contact-us">Contact Us
-        {{-- <i class="fa fa-caret-down ml-1"></i> --}}
-      </a>
-    </li>
-    {{-- <div class="menu-content">
-                <div class="row">
-                  <div class="column">
-                    <div class="menu-head">ABC-XYZ</div>
-                    <a href="#">123</a>
-                  </div>
-                </div>
-              </div> --}}
-  </div>
-  </ul>
-  </div>
-  <!-- <ul class="nav navbar-nav navbar-right text-right" id="search-form">
-    <li>
-      <form action="/action_page.php" style="float: right !important;">
-        <input type="text" placeholder="Search.." name="search2" class="search-field">
-        <button type="submit" style="border: none; margin-left: -10px; border-radius: 5px; padding: 7px;"><i class="fa fa-search"></i></button>
-      </form>
-    </li>
-  </ul> -->
   </div>
 </nav>
