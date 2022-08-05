@@ -182,7 +182,7 @@
         </div>
       </div>
       <div class="col-md-6 heading-section heading-section-white ftco-animate pl-lg-5 pt-md-0 fadeInUp ftco-animated">
-        <h2 class="mb-3 mt-3">shri kallaji vedic vishvavidyalaya</h2>
+        <h2 class="mb-3 mt-3">Shri Kallaji Vedic Vishvavidyalaya</h2>
         <p class="section-para">Ever since its inception university has been striving to maintain excellence in teaching, research and community service. Great emphasis has been laid in creating scientific temper, maintaining high ethical values and in keeping pace with emerging areas of higher learning. University has ensured overall socio-economic growth of all the sections of society by encouraging greater access and inclusive approach making it most preferred institution for higher education, learning and research.</p>
       </div>
     </div>
