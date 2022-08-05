@@ -127,7 +127,7 @@ p {
 }
 
 .mega-menu .menubtn {
-    font-size: 13px !important;
+    font-size: 11px !important;
     border: none;
     outline: none;
     font-weight: 600 !important;
@@ -239,7 +239,11 @@ p {
 .founder {
     color: #F87217;
 }
-
+@media (max-width: 1024px) {
+    .mega-menu .menubtn {
+        font-size: 10px !important;
+    }
+}
 @media (max-width:768px) {
     .web-img {
         width: 50% !important;
@@ -594,10 +598,20 @@ p {
     outline: none;
     margin-left: 35px;
 }
-
 @media screen and (max-width: 376px) {
     .search-field {
         width: 80%;
+    }
+}
+
+@media (max-width: 640px) {
+    .search-field {
+        border: none;
+        border-radius: 5px;
+        padding: 7px;
+        background: blanchedalmond;
+        outline: none;
+        margin-left: 0px;
     }
 }
 

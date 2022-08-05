@@ -3136,7 +3136,7 @@ img.mfp-img {
   .logo {
     display: flex;
     margin: auto;
-    width: 40% !important;
+    width: 65% !important;
   }
 
   .navbar-toggler {
@@ -4856,7 +4856,7 @@ fieldset:disabled a.btn {
   float: none;
 }
 
-@media (max-width:992px) {
+@media (max-width:991px) {
   .navbar-collapse {
     z-index: 9999 !important;
     position: absolute;
@@ -6001,7 +6001,7 @@ h5,
 }
 
 .topper {
-  font-size: 15px;
+  font-size: 14px;
   width: 100%;
   display: block;
   padding: 20px 0;
@@ -6009,8 +6009,16 @@ h5,
 
 @media (max-width: 1024px) {
   .topper {
-    font-size: 14px !important;
+    font-size: 12px !important;
   }
+}
+@media (max-width: 640px) {
+  /* .admission-btn {
+    font-size: 9px;
+  }
+  .admission_btn {
+    padding: 0!important;
+  } */
 }
 
 @media (max-width: 575px) {
@@ -6020,6 +6028,12 @@ h5,
   .topper {
     font-size: 8px!important;
     margin-bottom: 10px;
+  }
+  .search_bar_for_mobile {
+    display: block!important;
+  }
+  .search_bar_for_desktop {
+    display: none!important;
   }
 }
 
@@ -6131,7 +6145,7 @@ h5,
     font-size: 13px;
   }
   .admission_btn {
-    padding: 0 5px!important;
+    padding: 0 9px!important;
   }
 }
 @media (max-width: 991.98px) {
@@ -6719,7 +6733,13 @@ h5,
 .ftco-services .services .media-body {
   color: rgba(255, 255, 255, 0.8);
 }
+.search_bar_for_mobile {
+  display: none;
+}
 
+.search_bar_for_desktop {
+  display: block;
+}
 @media (max-width: 767.98px) {
   .ftco-services .services .media-body {
     padding-bottom: 3.5em !important;
@@ -6737,6 +6757,9 @@ h5,
 }
 
 @media (max-width:768px) {
+  #search-form {
+    font-size: 15px;
+  }
   .services-2 .icon {
     height: 50px !important;
     width: 50px !important;
@@ -6750,6 +6773,26 @@ h5,
   .dataTables_wrapper {
     padding: 20px 0;
   }
+}
+@media (max-width:575px) {
+  #search-form {
+    font-size: 11px;
+  }
+  #search-form form {
+    display: flex;
+    /* margin-bottom: 10px; */
+  }
+}
+/* @media (min-width:574px) {
+  .search_bar_for_mobile {
+    display: block;
+  }
+  .search_bar_for_desktop {
+    display: none;
+  }
+} */
+#search-form form {
+  display: flex;
 }
 
 .services-2 .icon {

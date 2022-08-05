@@ -6,16 +6,16 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
   <div class="container-fluid">
     <div class="row d-flex align-items-center align-items-stretch">
       <div class="col-lg-4 col-md-12 d-flex align-items-center justify-content-md-center justify-content-sm-center justify-content-center">
-        <a class="navbar-brand mr-0" style="width:100%;">
+        <a class="navbar-brand mr-0">
           <img class="logo lazy-load-images web-img" src="{{ asset('frontend/images/skvvnewlogo.png') }}" alt="Shri Kallaji Vedic Vishvavidyalaya">
         </a>
       </div>
       <div class="col-lg-8 col-md-12 d-block">
         <div class="d-flex align-items-center text-left">
-          <div class="col-md topper align-items-center pl-0">
+          <div class="col-md topper align-items-center pl-0 text-center">
             <span class="contact_ref">
-              <i class="fa fa-envelope mr-2"></i>skvv.uni@gmail.com <br>
-              <span class="contact_ref"><i class="fa fa-phone mr-2"></i>01477 294 394</span>
+              <i class="fa fa-envelope mr-1"></i>skvv.uni@gmail.com <br>
+              <span class="contact_ref"><i class="fa fa-phone mr-1"></i>01477 294 394</span>
             </span>
           </div>
           <!-- <div class="col-md topper align-items-center">
@@ -23,26 +23,28 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
           </div> -->
           <div class="col-md topper align-items-center px-0">
             <div class="admission_btn pr-0">
-              <a href="{{ asset('frontend/images/Result 2022.pdf') }}" class="btn btn-primary admission-btn" target="_blank">
+              <a href="{{ asset('frontend/images/Result 2022.pdf') }}" class="btn btn-primary admission-btn" target="_blank" style="border:none;">
                 <span>Result</span>
               </a>
             </div>
           </div>
           <div class="col-md topper align-items-center pr-0">
             <div class="admission_btn pr-0">
-              <a href="{{ url('apply')}}" class="btn btn-primary admission-btn">
+              <a href="{{ url('apply')}}" class="btn btn-primary admission-btn" style="border:none;">
                 <span>Admission</span>
               </a>
             </div>
           </div>
-          <ul class="nav navbar-nav navbar-right text-right" id="search-form">
-            <li>
-              <form action="/action_page.php" style="float: right !important;">
-                <input type="text" placeholder="Search.." name="search2" class="search-field">
-                <button type="submit" style="border: none; margin-left: -10px; border-radius: 5px; padding: 7px;"><i class="fa fa-search"></i></button>
-              </form>
-            </li>
-          </ul>
+          <div class="col-md topper align-items-center pr-0 search_bar_for_desktop">
+            <ul class="nav navbar-nav navbar-right text-right" id="search-form">
+              <li>
+                <form action="/action_page.php" style="float: right !important;">
+                  <input type="text" placeholder="Search.." name="search2" class="search-field">
+                  <button type="submit" style="border: none; margin-left: -10px; border-radius: 5px; padding: 7px;"><i class="fa fa-search"></i></button>
+                </form>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -216,6 +218,16 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
             </a>
           </li>
         </div>
+      </ul>
+    </div>
+    <div class="search_bar_for_mobile">
+      <ul class="nav navbar-nav navbar-right text-right" id="search-form">
+        <li>
+          <form action="/action_page.php" style="display:block;">
+            <input type="text" placeholder="Search.." name="search2" class="search-field">
+            <button type="submit" style="border: none; margin-left: -10px; border-radius: 5px; padding: 7px;"><i class="fa fa-search"></i></button>
+          </form>
+        </li>
       </ul>
     </div>
   </div>
