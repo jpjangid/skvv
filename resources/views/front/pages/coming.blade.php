@@ -6,19 +6,44 @@
 @section('css')
 <style>
     .container .comming-soon .background {
-        width: 500px;
-        height: 100vh;
-        object-fit: cover;
+        /* width: 500px; */
+        height: 85vh;
+        object-fit: contain;
         display: flex;
         margin: auto;
     }
     .tag img {
-        width: 300px;
+        width: 270px;
         position: absolute;
         top: 0;
     }
     .comming-soon {
         position: relative;
+    }
+    @media (max-width:992px) {
+        .container .comming-soon .background {
+            /* width: 500px; */
+            /* height: 50vh; */
+        }
+        .tag img {
+            width: 175px;
+        }
+    }
+    @media (max-width:768px) {
+        .container .comming-soon .background {
+            /* width: 400px; */
+        }
+        .tag img {
+            width: 150px;
+        }
+    }
+    @media (max-width:575px) {
+        .container .comming-soon .background {
+            width: 289px;
+        }
+        .tag img {
+            width: 100px;
+        }
     }
   </style>
 @endsection

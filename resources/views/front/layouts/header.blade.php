@@ -165,33 +165,76 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
             <div class="row m-0">
               <div class="column">
                 <a href="{{ url('coming-soon') }}">Courses Offer</a>
-                <a href="{{ url('coming-soon') }}">Syllabus & Prospectus</a>
+                <div class="sub-menus">
+                  <div class="hover_div">
+                    <a href="{{ url('coming-soon') }}" style="transition:none">Syllabus</a><i class="fa fa-caret-down ml-1"></i>
+                  </div>
+                  <div class="sub-menu-content">
+                    <div class="row m-0">
+                      <div class="column">
+                        <a href="{{ url('coming-soon') }}">UG</a>
+                        <a href="{{ url('coming-soon') }}">PG</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="{{ url('coming-soon') }}">Prospectus</a>
+                <a href="{{ url('coming-soon') }}">Fee Structure</a>
                 <a href="{{ url('coming-soon') }}">Academic Calendar</a>
                 <a href="{{ url('coming-soon') }}">Student Admission</a>
                 <a href="{{ url('coming-soon') }}">Examinations</a>
                 <a href="{{ url('coming-soon') }}">Results</a>
                 <a href="{{ url('coming-soon') }}">Student's Notice Board</a>
-                <a href="{{ url('coming-soon') }}">Services(TC/CC/MC/ID/Library Card/Insurance etc.)</a>
+                <div class="sub-menus">
+                  <div class="hover_div">
+                    <a href="{{ url('coming-soon') }}" style="transition:none">Services</a><i class="fa fa-caret-down ml-1"></i>
+                  </div>
+                  <div class="sub-menu-content">
+                    <div class="row m-0">
+                      <div class="column">
+                        <a href="{{ url('coming-soon') }}">TC, CC</a>
+                        <a href="{{ url('coming-soon') }}">MC</a>
+                        <a href="{{ url('coming-soon') }}">ID</a>
+                        <a href="{{ url('coming-soon') }}">Library Card</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <a href="{{ url('coming-soon') }}">Hostel</a>
               </div>
             </div>
           </div>
         </div>
         <div class="mega-menu">
-        </div>
-        <div class="mega-menu">
-          <li class="menubtn"><a class="mega-a" href="">Research<i class="fa fa-caret-down ml-1"></i></a></li>
+          <li class="menubtn"><a class="mega-a" href="">Research & Publication<i class="fa fa-caret-down ml-1"></i></a></li>
           <div class="menu-content">
             <div class="row m-0">
               <div class="column">
-                <a href="{{ asset('frontend/images/Paper-I_English.pdf') }}" target="_blank">Maharshi Bharadvaja Anusandhana Kendra</a>
-                <a href="{{ asset('frontend/images/Hindi-20.pdf') }}" target="_blank">Vidhyavaridhi(Ph.D.) & Vidyavacaspati(D.Lit.)</a>
+                <a href="{{ asset('frontend/images/Paper-I_English.pdf') }}" target="_blank">Maharishi Bharadwaj Research Center</a>
+                <div class="sub-menus2">
+                  <div class="hover_div">
+                    <a href="{{ asset('frontend/images/Hindi-20.pdf') }}" target="_blank" style="transition:none">Doctor of Philosophy (Ph.D.)</a><i class="fa fa-caret-down ml-1" style="padding:5px;"></i>
+                  </div>
+                  <div class="sub-menu-content2">
+                    <div class="row m-0">
+                      <div class="column">
+                        <a href="{{ url('coming-soon') }}">REET</a>
+                        <a href="{{ url('coming-soon') }}">Ph.D. Award List</a>
+                        <a href="{{ url('coming-soon') }}">Course Work</a>
+                        <a href="{{ url('coming-soon') }}">Academic Calendar</a>
+                        <a href="{{ url('coming-soon') }}">Guideline</a>
+                        <a href="{{ url('coming-soon') }}">Rules & regulation</a>
+                        <a href="{{ url('coming-soon') }}">Fee Structure</a>
+                        <a href="{{ url('coming-soon') }}">Notice</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <a href="{{ asset('frontend/images/Paper-I_Hindi-00.pdf') }}" target="_blank">Publication Committee</a>
-                <a href="{{ asset('frontend/images/SANSKRIT-25.pdf') }}" target="_blank">List of Pulications</a>
+                <a href="{{ asset('frontend/images/SANSKRIT-25.pdf') }}" target="_blank">Publication List</a>
                 <a href="{{ asset('frontend/images/Sanskrit Traditional-73.pdf') }}" target="_blank">Ongoing Projects</a>
                 <a href="{{ asset('frontend/images/Yoga-100.pdf') }}" target="_blank">Completed Projects</a>
                 <a href="{{ asset('frontend/images/Yoga-100.pdf') }}" target="_blank">University Journal</a>
-                <a href="{{ asset('frontend/images/Yoga-100.pdf') }}" target="_blank">Referesher Courses</a>
                 <a href="{{ asset('frontend/images/Yoga-100.pdf') }}" target="_blank">Seminars</a>
                 <a href="{{ asset('frontend/images/Yoga-100.pdf') }}" target="_blank">Workshops</a>
                 <a href="{{ asset('frontend/images/Yoga-100.pdf') }}" target="_blank">Public Letcures</a>

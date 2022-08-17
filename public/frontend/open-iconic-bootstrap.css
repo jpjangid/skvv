@@ -4861,7 +4861,7 @@ fieldset:disabled a.btn {
     z-index: 9999 !important;
     position: absolute;
     left: 0;
-    top: 50px;
+    top: 48px;
     width: 100%;
     background-color: #fff;
   }
@@ -4871,6 +4871,16 @@ fieldset:disabled a.btn {
     overflow-x: hidden;
     max-height: 150px;
     min-height: 50px;
+  }
+  .sub-menu-content {
+    margin-left: 0;
+    position: relative;
+    margin-top: 0;
+  }
+  .sub-menu-content2 {
+    margin-top: 0;
+    left: 0;
+    position: relative;
   }
 
   .navbar-collapse .mega-menu .mega-a {
@@ -6001,7 +6011,7 @@ h5,
 }
 
 .topper {
-  font-size: 14px;
+  font-size: 13px;
   width: 100%;
   display: block;
   padding: 20px 0;
