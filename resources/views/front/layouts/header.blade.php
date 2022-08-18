@@ -145,17 +145,27 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
           </li>
           <div class="menu-content">
             <div class="row m-0">
-              @foreach($colleges as $college)
-              @if(!empty($college->departments) && count($college->departments) > 0)
-              <div class="column col-md-3">
-                <div class="menu-head">{{ $college->name }}</div>
-                @foreach($college->departments as $department)
-                <a style="text-transform: capitalize !important;" href="{{ route('front.department',['department' => $department->slug]) }}">{{ strtolower($department->name) }}</a>
+              <div class="column">
+                @foreach($colleges as $college)
+                @if(!empty($college->departments) && count($college->departments) > 0)
+                <!-- <a href="{{ url('coming-soon') }}">{{ $college->name }}</a> -->
+                <div class="sub-menus">
+                  <div class="hover_div">
+                    <a href="" style="transition:none">{{ $college->name }}</a><i class="fa fa-caret-down ml-1"></i>
+                  </div>
+                  <div class="sub-menu-content extra_class">
+                    <div class="row m-0">
+                      <div class="column">
+                      @foreach($college->departments as $department)
+                        <a href="{{ route('front.department',['department' => $department->slug]) }}">{{ strtolower($department->name) }}</a>
+                        @endforeach
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                @endif
                 @endforeach
-                <div class="dropdown-divider"></div>
               </div>
-              @endif
-              @endforeach
             </div>
           </div>
         </div>
@@ -218,7 +228,21 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
                   <div class="sub-menu-content2">
                     <div class="row m-0">
                       <div class="column">
-                        <a href="{{ url('coming-soon') }}">REET</a>
+                        <div class="sub-sub-menus2">
+                          <div class="hover_div2">
+                            <a href="{{ url('coming-soon') }}" style="transition:none">RET</a><i class="fa fa-caret-down ml-1" style="padding:5px;"></i>
+                          </div>
+                          <div class="sub-sub-menu-content2">
+                            <div class="row m-0">
+                              <div class="column">
+                                <a href="{{ url('coming-soon') }}">Online Form</a>
+                                <a href="{{ url('coming-soon') }}">Syllabus</a>
+                                <a href="{{ url('coming-soon') }}">Modul Paper</a>
+                                <a href="{{ url('coming-soon') }}">Result</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                         <a href="{{ url('coming-soon') }}">Ph.D. Award List</a>
                         <a href="{{ url('coming-soon') }}">Course Work</a>
                         <a href="{{ url('coming-soon') }}">Academic Calendar</a>
@@ -237,7 +261,7 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
                 <a href="{{ asset('frontend/images/Yoga-100.pdf') }}" target="_blank">University Journal</a>
                 <a href="{{ asset('frontend/images/Yoga-100.pdf') }}" target="_blank">Seminars</a>
                 <a href="{{ asset('frontend/images/Yoga-100.pdf') }}" target="_blank">Workshops</a>
-                <a href="{{ asset('frontend/images/Yoga-100.pdf') }}" target="_blank">Public Letcures</a>
+                <a href="{{ asset('frontend/images/Yoga-100.pdf') }}" target="_blank">Public Lectures</a>
               </div>
             </div>
           </div>
