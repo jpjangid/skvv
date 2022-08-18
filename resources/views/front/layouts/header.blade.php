@@ -156,7 +156,7 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
                   <div class="sub-menu-content extra_class">
                     <div class="row m-0">
                       <div class="column">
-                      @foreach($college->departments as $department)
+                        @foreach($college->departments as $department)
                         <a href="{{ route('front.department',['department' => $department->slug]) }}">{{ strtolower($department->name) }}</a>
                         @endforeach
                       </div>
