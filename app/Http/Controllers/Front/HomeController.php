@@ -9,6 +9,7 @@ use App\Models\Department;
 use App\Models\NewsEvents;
 use App\Models\Course;
 use App\Models\alumnispeak;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -96,5 +97,11 @@ class HomeController extends Controller
     public function syllabus()
     {
         return view('front.pages.syllabus');
+    }
+
+    public function administrator($name)
+    {
+        $user = User::where('designation', $name)->first();
+        return view('front.pages.administration', compact('user'));
     }
 }

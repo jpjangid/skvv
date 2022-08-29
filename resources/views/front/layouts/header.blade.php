@@ -124,14 +124,14 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
           <div class="menu-content">
             <div class="row m-0">
               <div class="column">
-                <a href="{{ url('coming-soon') }}">Chairman</a>
-                <a href="{{ url('coming-soon') }}">President</a>
-                <a href="{{ url('coming-soon') }}">Resistrar</a>
-                <a href="{{ url('coming-soon') }}">Finance Officer</a>
-                <a href="{{ url('coming-soon') }}">Controller of Examination</a>
-                <a href="{{ url('coming-soon') }}">Chief Librarian</a>
-                <a href="{{ url('coming-soon') }}">Director</a>
-                <a href="{{ url('coming-soon') }}">Assistant Resigtrar</a>
+                <a href="{{ url('administration',['name' => 'chairman']) }}">Chairman</a>
+                <a href="{{ url('administration',['name' => 'president']) }}">President</a>
+                <a href="{{ url('administration',['name' => 'registrar']) }}">Resistrar</a>
+                <a href="{{ url('administration',['name' => 'finance officer']) }}">Finance Officer</a>
+                <a href="{{ url('administration',['name' => 'controller of examination']) }}">Controller of Examination</a>
+                <a href="{{ url('administration',['name' => 'chief librarian']) }}">Chief Librarian</a>
+                <a href="{{ url('administration',['name' => 'director']) }}">Director</a>
+                <a href="{{ url('administration',['name' => 'assistant resigtrar']) }}">Assistant Resigtrar</a>
                 <a href="{{ url('non-teaching/staff') }}">Non Teaching Staff</a>
               </div>
             </div>
