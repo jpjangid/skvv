@@ -236,7 +236,7 @@ $colleges = College::where(['status' => 0,'flag' => 0])->with('departments')->ge
                             <div class="row m-0">
                               <div class="column">
                                 <a href="{{ url('coming-soon') }}">Online Form</a>
-                                <a href="{{ url('coming-soon') }}">Syllabus</a>
+                                <a href="{{ url('syllabus') }}">Syllabus</a>
                                 <a href="{{ url('coming-soon') }}">Modul Paper</a>
                                 <a href="{{ url('coming-soon') }}">Result</a>
                               </div>

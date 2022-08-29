@@ -127,6 +127,8 @@ Route::get('recognition', [App\Http\Controllers\Front\NewsController::class, 're
 Route::view('per', 'per');
 Route::view('locate-us', 'front.pages.locate');
 Route::view('coming-soon', 'front.pages.coming');
+// Route::view('syllabus', 'front.pages.syllabus');
+
 Route::view('chairperson', 'front.pages.chairperson');
 Route::post('test', [App\Http\Controllers\PermissionController::class, 'permission'])->name('per.create');
 
