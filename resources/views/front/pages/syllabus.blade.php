@@ -25,19 +25,16 @@
             <div class="col-md-3">
                 <table class="table table-bordered">
                     <thead class="table-heading text-light font-weight-bold table-borderless">
-                        <td>Media</td>
+                        <td>RET</td>
                     </thead>
                     <tr>
-                        <td class="active-td"><a href="{{ route('front.news.events') }}">News & Events</a></td>
-                    </tr>
-                    {{-- <tr>
-                        <td><a href="upcoming_news.html">Upcoming Events</a></td>
-                    </tr> --}}
-                    <tr>
-                        <td><a href="{{ route('front.video.gallery') }}">Video Gallery</a></td>
+                        <td class="active-td"><a href="{{ url('cominy-soon') }}">Online Form</a></td>
                     </tr>
                     <tr>
-                        <td><a href="{{ route('front.photo.gallery') }}">Photo Gallery</a></td>
+                        <td><a href="{{ url('cominy-soon') }}">Module Paper</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="{{ url('cominy-soon') }}">Result</a></td>
                     </tr>
                 </table>
             </div>
@@ -54,13 +51,13 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><a href="{{ asset('frontend/images/Paper-I_English.pdf') }}" target="_blank">English</a></td>
+                                <td><a href="{{ asset('frontend/images/Paper-I_English.pdf') }}" target="_blank">General Paper-(English)</a></td>
                             </tr>
                             <tr>
-                                <td><a href="{{ asset('frontend/images/Hindi-20.pdf') }}" target="_blank">Hindi</a></td>
+                                <td><a href="{{ asset('frontend/images/Hindi-20.pdf') }}" target="_blank">General Paper-(Hindi)</a></td>
                             </tr>
                             <tr>
-                                <td><a href="{{ asset('frontend/images/Paper-I_Hindi-00.pdf') }}" target="_blank">Hindi-1</a></td>
+                                <td><a href="{{ asset('frontend/images/Paper-I_Hindi-00.pdf') }}" target="_blank">General Paper-(Hindi-1)</a></td>
                             </tr>
                             <tr>
                                 <td><a href="{{ asset('frontend/images/SANSKRIT-25.pdf') }}" target="_blank">SANSKRIT</a></td>
