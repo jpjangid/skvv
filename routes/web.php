@@ -129,7 +129,7 @@ Route::view('locate-us', 'front.pages.locate');
 Route::view('coming-soon', 'front.pages.coming');
 // Route::view('syllabus', 'front.pages.syllabus');
 
-Route::view('chairperson', 'front.pages.chairperson');
+// Route::view('chairperson', 'front.pages.chairperson');
 Route::post('test', [App\Http\Controllers\PermissionController::class, 'permission'])->name('per.create');
 
 //Route for addmission
@@ -168,6 +168,7 @@ Route::get('{department}/courses', [App\Http\Controllers\Front\CourseController:
 //Route for front department 
 Route::get('{department}', [App\Http\Controllers\Front\DepartmentController::class, 'index'])->name('front.department');
 Route::get('teacher/{name}', [App\Http\Controllers\Front\DepartmentController::class, 'teacher_details']);
+Route::get('administration/{name}', [App\Http\Controllers\Front\HomeController::class, 'administrator']);
 
 //Route for Non-Teaching Staff
 Route::get('non-teaching/staff', [App\Http\Controllers\Front\PageController::class, 'nonteaching'])->name('front.non_teaching.index');
