@@ -19,6 +19,7 @@
 @endsection
 
 @section('content')
+
 <section class="media-section">
     <div class="container-fluid my-4">
         <div class="row no gutters">
